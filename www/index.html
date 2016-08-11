@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>TSL Tutor</title>
+        
+        <!-- some fancy styles-->
+        <style>
+        .btn {
+            background-color: #990066; /* purple */
+            }
+        </style>
+        
+        
+        <!-- navigation page -->
+        <link rel="stylesheet" type="text/css" href="css/menu.css"/>
+        <style>
+            
+            .navigation{
+                
+                visibility: hidden;
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                float: left;
+                position: fixed; 
+                top: 0; bottom: 0; left: 0; 
+            }
+            #nav_btn{
+                 top: 0%;
+                 position: fixed;
+                 height: 50px;
+                 width: 40px;
+                
+            }
+        
+        </style>
+        
+        <!-- centered div -->
+         <style>
+       .info{
+           width: 100%;
+           height: 100%;
+           top: 15%;
+           left: 15%
+           right: 15%;
+           text-align: center;
+           position: fixed;
+           
+       }
+        
+        .blue{
+            /*define the origin of the rotation*/             
+            transform-origin: center 63%;               
+                  
+                 
+                 
+             }
+        </style>
+        
+        
+        <!-- progress bar -->
+        <link rel="stylesheet" type="text/css" href="css/progress_bar.css"/>
+        
+        <!--javascript to control a navigation page-->
+        
+        
+        <script>
+            
+            function open_nav(){                 
+                
+               document.getElementsByClassName("navigation")[0].style.visibility = "visible";
+            }        
+            
+            function close_nav(){
+                document.getElementsByClassName("navigation")[0].style.visibility = "hidden";
+            }
+        
+        </script> 
+        
+        
+       
+        
+    </head>
+    <body>
+         
+        <script type="text/javascript" src="cordova.js"></script>    
+        
+            
+        <!--table for making-->
+        <table style="height:100%; bordercolor=black; width=100% ; background-color=purple;
+        position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+            
+        <!--upper row-->
+        <tr  style="background-color:#990066; height: 15%; width=100%">
+        <td> 
+              <!-- dashed button -->
+            <center>
+            <button class="btn" onclick="open_nav()">
+            <img src="dash_button.svg" width=40 height=55 alt="">
+            </button>
+            </center>        
+            
+        </td>  
+            
+        <td width=100%>
+            <!--headline-->
+            <center>                
+            <font style ="color: rgba(0,0,0,0.6); text-shadow: 2px 2px 3px rgba(255,255,255,0.1);" size="+3" face="times"><b>TSL</b></font>    
+            </center>
+        </td>
+        </tr>
+            
+        <!--bottom row-->
+        <tr  style="height: 75%; width=100%">
+            <td colspan = 2 >
+            <!--hypnosis image -->
+                
+            <div class = "info">               
+            <!-- blue hypnosis image -->
+            </div>
+              
+            </td>
+        </tr>          
+            
+        </table>
+        
+         <div class="navigation">
+                
+            <ul>
+            <!-- <li><a href="sign_in.html">Sign In</a></li> -->
+            <li><a class="active" href="index.html">TSL</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            
+                <div align="right"><button id="nav_btn" onclick="close_nav()" > X </button></div>
+            </ul>
+            </div>
+           
+    </body>
+</html>
