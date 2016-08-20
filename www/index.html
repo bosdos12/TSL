@@ -13,87 +13,38 @@
         </style>
         
         
-        <!-- navigation page -->
-        <link rel="stylesheet" type="text/css" href="css/menu.css"/>
-        <style>
-            
-            .navigation{
-                
-                visibility: hidden;
-                height: 100%;
-                width: 100%;
-                margin: 0;
-                padding: 0;
-                float: left;
-                position: fixed; 
-                top: 0; bottom: 0; left: 0; 
-            }
-            #nav_btn{
-                 top: 0%;
-                 position: fixed;
-                 height: 50px;
-                 width: 40px;
-                
-            }
-        
-        </style>
-        
-        <!-- centered div -->
+        <!-- divs for locating our flags -->
          <style>
-       .info{
-           width: 100%;
-           height: 100%;
-           top: 15%;
-           left: 15%
-           right: 15%;
-           text-align: center;
-           position: fixed;
-           
+       .turFlag{
+           float: left;
+           width: 50%;          
        }
-        
-        .blue{
-            /*define the origin of the rotation*/             
-            transform-origin: center 63%;               
-                  
-                 
-                 
+             
+        .engFlag{
+            float: left;
+            width: 50%;  
              }
         </style>
         
         
-        <!-- progress bar -->
-        <link rel="stylesheet" type="text/css" href="css/progress_bar.css"/>
-        
         <!--javascript to control a navigation page-->
-        
-        
         <script>
             
             function open_nav(){                 
-                
-               document.getElementsByClassName("navigation")[0].style.visibility = "visible";
+                alert("Please, choose your language.")
             }        
-            
-            function close_nav(){
-                document.getElementsByClassName("navigation")[0].style.visibility = "hidden";
-            }
         
         </script> 
-        
-        
        
         
     </head>
-    <body>
-         
-        <script type="text/javascript" src="cordova.js"></script>    
-        
+    <body>  
             
-        <!--table for making-->
+        <!--table for basic layout, contains two rows only-->
         <table style="height:100%; bordercolor=black; width=100% ; background-color=purple;
         position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
             
-        <!--upper row-->
+        <!--upper row, has two cols-->
         <tr  style="background-color:#990066; height: 15%; width=100%">
         <td> 
               <!-- dashed button -->
@@ -106,6 +57,7 @@
         </td>  
             
         <td width=100%>
+            
             <!--headline-->
             <center>                
             <font style ="color: rgba(0,0,0,0.6); text-shadow: 2px 2px 3px rgba(255,255,255,0.1);" size="+3" face="times"><b>TSL</b></font>    
@@ -113,13 +65,17 @@
         </td>
         </tr>
             
-        <!--bottom row-->
+        <!--bottom row, has one col-->
         <tr  style="height: 75%; width=100%">
             <td colspan = 2 >
             <!--hypnosis image -->
                 
-            <div class = "info">               
-            <!-- blue hypnosis image -->
+            <div class = "turFlag">               
+                <center><img src = "images/TurkishFlag.PNG" width = "65%" height="25%"></center>
+            </div>
+               
+            <div class = "engFlag">               
+                <center><img src = "images/EnglishFlag.PNG" width = "56%" height="25%"></center>
             </div>
               
             </td>
@@ -127,20 +83,6 @@
             
         </table>
         
-         <div class="navigation">
-                
-            <ul>
-            <!-- <li><a href="sign_in.html">Sign In</a></li> -->
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="pages/about_us.html">About Us</a></li>
-            <hr>
-            <li><a href="">Alphabet</a></li>
-            <li><a href="">Basics</a></li>
-            <li><a href="">Numbers</a></li>
-            
-                <div align="right"><button id="nav_btn" onclick="close_nav()" > X </button></div>
-            </ul>
-            </div>
            
     </body>
 </html>
