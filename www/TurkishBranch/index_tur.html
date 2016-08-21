@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <title>TSL Tutor</title>
+        <title>TiD ÖĞRETMEN</title>
         
         <!-- some fancy styles-->
         <style>
@@ -76,13 +76,17 @@
         
         </script> 
         
-        
+        <!-- javascript allowing to access the language change page-->
+        <script>
+        function langChange(){
+            localStorage.setItem('lang', 0);
+        }
+        </script>
        
         
     </head>
     <body>
-         
-        <script type="text/javascript" src="cordova.js"></script>    
+            
         
             
         <!--table for making-->
@@ -104,7 +108,7 @@
         <td width=100%>
             <!--headline-->
             <center>                
-            <font style ="color: rgba(0,0,0,0.6); text-shadow: 2px 2px 3px rgba(255,255,255,0.1);" size="+3" face="times"><b>TSL</b></font>    
+            <font style ="color: rgba(0,0,0,0.6); text-shadow: 2px 2px 3px rgba(255,255,255,0.1);" size="+3" face="times"><b>TID</b></font>    
             </center>
         </td>
         </tr>
@@ -127,12 +131,14 @@
                 
             <ul>
             <!-- <li><a href="sign_in.html">Sign In</a></li> -->
-            <li><a class="active" href="index_eng.html">Home</a></li>
-            <li><a href="">About Us</a></li>
+            <li><a class="active" href="index_eng.html">Anasayfa</a></li>
+            <li><a href="">Hakkimizda</a></li>
             <hr>
-            <li><a href="">Alphabet</a></li>
-            <li><a href="">Basics</a></li>
-            <li><a href="">Numbers</a></li>
+            <li><a href="">Alfabe</a></li>
+            <li><a href="">Temeller</a></li>
+            <li><a href="">Sayılar</a></li>
+            <hr>
+            <li><a href="../index.html" onclick = 'langChange()'>Dil Seçimi</a></li>
             
                 <div align="right"><button id="nav_btn" onclick="close_nav()" > X </button></div>
             </ul>

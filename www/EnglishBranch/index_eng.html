@@ -76,13 +76,18 @@
         
         </script> 
         
+        <!-- javascript allowing to access the language change page-->
+        <script>
+        function langChange(){
+            localStorage.setItem('lang', 0);
+        }
+        </script>
+        
         
        
         
     </head>
-    <body>
-         
-        <script type="text/javascript" src="cordova.js"></script>    
+    <body>   
         
             
         <!--table for making-->
@@ -133,6 +138,8 @@
             <li><a href="">Alphabet</a></li>
             <li><a href="">Basics</a></li>
             <li><a href="">Numbers</a></li>
+            <hr>
+            <li><a href="../index.html" onclick = "langChange()">Language</a></li>
             
                 <div align="right"><button id="nav_btn" onclick="close_nav()" > X </button></div>
             </ul>

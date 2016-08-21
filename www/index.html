@@ -27,6 +27,38 @@
         </style>
         
         
+        
+        
+        <!--javascript to save the language preferences in the local storage and navigate users according to their langauge preferences-->
+        <!-- Jquery in a case we need it -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        
+        //sending user to another page if he has chosen a preferable language before
+         <script>
+         (function() {
+            var lang = localStorage.getItem('lang');
+            if (lang == 1){
+                window.location.href = "TurkishBranch/index_tur.html";
+            }            
+            else if (lang == 2){
+                window.location.href = "EnglishBranch/index_eng.html";
+            }
+         })();
+             
+        
+             
+        function languageChoice(lang){
+            if(lang == 1){
+                localStorage.setItem('lang', 1);
+                window.location.href = "TurkishBranch/index_tur.html";                
+            }
+            else if(lang == 2){
+                localStorage.setItem('lang', 2);
+                window.location.href = "EnglishBranch/index_eng.html";                
+            }
+        }
+        </script> 
+       
         <!--javascript to control a navigation page-->
         <script>
             
@@ -35,10 +67,10 @@
             }        
         
         </script> 
-       
         
     </head>
     <body>  
+         
             
         <!--table for basic layout, contains two rows only-->
         <table style="height:100%; bordercolor=black; width=100% ; background-color=purple;
@@ -70,12 +102,12 @@
             <td colspan = 2 >
             <!--hypnosis image -->
                 
-            <div class = "turFlag">               
-                <center><img src = "images/TurkishFlag.PNG" width = "65%" height="25%"></center>
+            <div class = "turFlag"> 
+                <center><img src = "images/TurkishFlag.PNG" width = "65%" height="25%" onclick = "languageChoice(1)"></center>
             </div>
                
-            <div class = "engFlag">               
-                <center><img src = "images/EnglishFlag.PNG" width = "56%" height="25%"></center>
+            <div class = "engFlag">  
+                <center><img src = "images/EnglishFlag.PNG" width = "56%" height="25%" onclick = "languageChoice(2)"></center>
             </div>
               
             </td>
@@ -83,6 +115,6 @@
             
         </table>
         
-           
+         
     </body>
 </html>
