@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>TSL Tutor</title>
+        
+        <!-- some fancy styles-->
+        <style>
+        .nav_btn {
+            background-color: #990066; /* purple */            
+            border: none;
+            outline: none;
+            }
+        </style>
+        
+        
+        <!-- navigation page -->
+        <link rel="stylesheet" type="text/css" href="../css/menu.css"/>
+        <style>
+            
+        .navigation{
+                
+            visibility: hidden;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            float: left;
+            position: fixed; 
+            top: 0; bottom: 0; left: 0; 
+            }
+        
+        </style>
+        
+        <!-- center of the display -->
+         <style>
+       .text{
+           width: 100%;
+           height: 100%;
+           top: 35%;
+           left: 15%
+           right: 15%;
+           text-align: center;
+           position: fixed;
+           font-size: 150%;
+           
+           
+       }
+        
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+         }
+        
+        </style>        
+        
+        <!--javascript to control a navigation page-->
+        
+        
+        <script>
+            
+            function open_nav(){                 
+                
+               document.getElementsByClassName("navigation")[0].style.visibility = "visible";
+            }        
+            
+            function close_nav(){
+                document.getElementsByClassName("navigation")[0].style.visibility = "hidden";
+            }
+        
+        </script> 
+        
+        <script src="../js/swipe.js"></script>
+        
+        <!-- javascript allowing to access the language change page-->
+        <script>
+        function langChange(){
+            localStorage.setItem('lang', 0);
+        }
+        </script>
+        
+        
+       
+        
+    </head>
+    <body>   
+        
+            
+        <!--table for making-->
+        <table style="height:100%; bordercolor=black; width=100% ; background-color=purple;
+        position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+            
+        <!--upper row-->
+        <tr  style="background-color:#990066; height: 10%; width=100%">
+        <td> 
+              <!-- dashed button -->
+            <center>
+            <button class="nav_btn" onclick="open_nav()">
+            <img src="../images/dash_button.svg" width=30 height=35 alt="">
+            </button>
+            </center>        
+            
+        </td>  
+            
+        <td width=100%>
+            <!--headline-->
+            <center>                
+            <font style ="color: rgba(0,0,0,0.6); text-shadow: 2px 2px 3px rgba(255,255,255,0.1);" size="+3" face="times"><b>TSL</b></font>    
+            </center>
+        </td>
+        </tr>
+            
+        <!--bottom row-->
+        <tr  style="height: 75%; width=100%">
+            <td colspan = 2 >
+                
+            <!-- asking name -->
+                
+            <div class = "text"> 
+                <p style = "margin-left:2%;margin-right:2%;">Bu proje Anar Kazimov tarafından oluşturulmuştur (Software Gates Takım kurucusu). Bunun amacıyla Türk İşaret Dili öğretmek ve tüm Türkiye üzerinde milyonlarca sağır insanlara yardım etmektir.</p>
+            </div>
+              
+            </td>
+        </tr>          
+            
+        </table>
+        
+         <div class="navigation">
+                
+            <ul>
+            <!-- <li><a href="sign_in.html">Sign In</a></li> -->
+            <div align="right" style=" top:0%; "><button onclick="close_nav()" style="padding: 0;border: none;background: none;"  ><font size="+2" onclick="close_nav()" ><b>X&nbsp</b></font> </button></div>
+            <li><a href="index_tur.html">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <hr>
+            <li><a class="active" href="">Alphabet</a></li>
+            <li><a href="">Basics</a></li>
+            <li><a  href="numbers.html">Numbers</a></li>
+            <hr>
+            <li><a href="../index.html" onclick = "langChange()">Language</a></li>
+            
+                
+            </ul>
+            </div>
+           
+    </body>
+</html>

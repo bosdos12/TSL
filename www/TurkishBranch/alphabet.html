@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>TID ÖĞRETMENİ</title>
+        <!-- some fancy styles-->
+        <style>
+        .nav_btn {
+            background-color: #990066; /* purple */            
+            border: none;
+            outline: none;
+            }
+        </style>
+        
+        
+        <!-- navigation page -->
+        <link rel="stylesheet" type="text/css" href="../css/menu.css"/>
+        <style>
+            
+        .navigation{
+                
+            visibility: hidden;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            float: left;
+            position: fixed; 
+            top: 0; bottom: 0; left: 0; 
+            }
+       
+        
+        </style>
+        
+        <!-- center of the display -->
+         <style>
+       .letters{
+           width: 100%;
+           height: 100%;
+           top: 20%;
+           left: 15%
+           right: 15%;
+           text-align: center;
+           position: fixed;
+           font-size: 120%;
+           
+           
+       }
+             
+             td{
+                 text-align: center;
+             }
+             
+        /* css for letters */
+        .inactive {color:blue; text-decoration: underline}
+        .selected {color:red;}
+        .wait_click{pointer-events: none;}
+        
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+             }                     
+
+        </style>        
+        
+        <!-- Importing JQuery -->
+        <script src="../js/jquery-3.1.0.min.js"></script>
+        
+        <!--javascript to control a navigation page-->
+        
+        
+        <script>
+            
+            function open_nav(){                 
+                
+               document.getElementsByClassName("navigation")[0].style.visibility = "visible";
+            }        
+            
+            function close_nav(){
+                document.getElementsByClassName("navigation")[0].style.visibility = "hidden";
+            }
+        
+        </script> 
+        <script src="../js/swipe.js"></script>
+        
+        <!-- javascript allowing to access the language change page-->
+        <script>
+        function langChange(){
+            localStorage.setItem('lang', 0);
+        }
+        </script>
+        <!-- Javascript to control the selection of letter -->
+        <script>
+        $(document).ready(function(){
+            $(".letters a").addClass('inactive');
+            $("#a_ltr").addClass('selected');
+            $( "a" ).click(function() {  
+                $("a").removeClass('selected');                
+                $( this ).addClass('selected');
+                
+                //manipulating with images
+                var letter = $(this).text();
+                if(letter == "Ö" ){ 
+                    $("a").addClass("wait_click");// so that user doesn't click another letter before  gesture wasn't showed fully                    
+                    $("#sign").attr("src","../images/gestures/O-1.jpg")
+                    setTimeout(function(){                        
+                        $("#sign").attr("src","../images/gestures/O-2.jpg") 
+                        $("a").removeClass("wait_click");
+                    }, 1000);                       
+                                      
+                    
+                }
+                
+                else if(letter == "Y"){
+                    $("a").addClass("wait_click");// so that user doesn't click another letter before  gesture wasn't showed fully
+                    $("#sign").attr("src","../images/gestures/Y.jpg")
+                    setTimeout(function(){                        
+                        $("#sign").attr("src","../images/gestures/Y2.jpg") 
+                        $("a").removeClass("wait_click");
+                    }, 1000);      
+                }
+                
+                else if(letter == "Ü"){
+                    $("a").addClass("wait_click");// so that user doesn't click another letter before  gesture wasn't showed fully
+                    $("#sign").attr("src","../images/gestures/U-1.jpg")
+                    setTimeout(function(){                        
+                        $("#sign").attr("src","../images/gestures/U-2.jpg") 
+                        $("a").removeClass("wait_click");
+                    }, 1000); 
+                }
+    
+                else if(letter == "Ç"){
+                    $("#sign").attr("src","../images/gestures/C-.jpg")
+                }
+                
+                else if(letter == "Ş"){
+                    $("#sign").attr("src","../images/gestures/S-.jpg")
+                }
+                else if(letter == "Ğ"){
+                    $("#sign").attr("src","../images/gestures/G-.jpg")
+                }
+                
+                else if(letter == "İ"){
+                    $("#sign").attr("src","../images/gestures/I-.jpg")
+                }
+                
+                else if(letter == "J" ){
+                    $("a").addClass("wait_click");// so that user doesn't click another letter before  gesture wasn't showed fully
+                    $("#sign").attr("src","../images/gestures/J.jpg")
+                    setTimeout(function(){          
+                    $("#sign").attr("src","../images/gestures/J-1.jpg")          
+                    }, 1000);                                     
+                    setTimeout(function(){          
+                    $("#sign").attr("src","../images/gestures/J-2.jpg") 
+                    $("a").removeClass("wait_click");
+                    }, 2000);
+                    }
+                
+                
+                else{
+                   $("#sign").attr("src","../images/gestures/" + letter +".jpg"); 
+                }   
+                               
+                
+            });
+        });
+            
+        </script>
+        
+
+       
+        
+    </head>
+    <body>   
+        
+            
+        <!--table for making-->
+        <table style="height:100%; bordercolor=black; width=100% ; background-color=purple;
+        position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+            
+        <!--upper row-->
+        <tr  style="background-color:#990066; height: 10%; width=100%">
+        <td> 
+              <!-- dashed button -->
+            <center>
+            <button class="nav_btn" onclick="open_nav()">
+            <img src="../images/dash_button.svg" width=30 height=35 alt="">
+            </button>
+            </center>        
+            
+        </td>  
+            
+        <td width=100%>
+            <!--headline-->
+            <center>                
+            <font style ="color: rgba(0,0,0,0.6); text-shadow: 2px 2px 3px rgba(255,255,255,0.1);" size="+3" face="times"><b>TID</b></font>    
+            </center>
+        </td>
+        </tr>
+            
+        <!--bottom row-->
+        <tr  style="height: 75%; width=100%">
+            <td colspan = 2 >
+                
+            <!-- asking name -->
+                
+            <div class = "letters"> 
+                
+                <center>
+                <table width = 70%>
+                <b>
+                <tr>
+                <td ><a id="a_ltr" >A</a></td>
+                <td ><a >B</a></td>
+                <td ><a >C</a></td>
+                <td ><a >Ç</a></td>
+                <td ><a >D</a></td>
+                <td ><a >E</a></td>                    
+                </tr>
+                    
+                <tr>
+                <td ><a >F</a></td>
+                <td ><a >G</a></td>
+                <td ><a >Ğ</a></td>
+                <td ><a >H</a></td>
+                <td ><a >I</a></td>
+                <td ><a >İ</a></td>
+                </tr>
+                    
+                <tr>
+                <td ><a >J</a></td>
+                <td ><a >K</a></td>
+                <td ><a >L</a></td>
+                <td ><a >M</a></td>
+                <td ><a >N</a></td>
+                <td ><a >O</a></td>
+                </tr>
+                    
+                <tr>                
+                <td ><a >Ö</a></td>
+                <td ><a >P</a></td>
+                <td ><a >R</a></td>
+                <td ><a >S</a></td>
+                <td ><a >Ş</a></td>
+                <td ><a >T</a></td>                
+                </tr>
+                    
+                <tr>   
+                <td ><a >U</a></td>
+                <td ><a >Ü</a></td>
+                <td ><a >V</a></td>
+                <td ><a >Y</a></td>
+                <td ><a >Z</a></td>
+                <td ><a ></a></td>
+                </tr>
+                </b>
+                </table>
+                
+                <img id = "sign" src = "../images/gestures/A.jpg" height = "200px" width="200px">
+                </center>
+                 
+                
+            </div>
+              
+            </td>
+        </tr>          
+            
+        </table>
+        
+         <div class="navigation">
+                
+            <ul>
+            <!-- <li><a href="sign_in.html">Sign In</a></li> -->
+            <div align="right" style=" top:0%; "><button onclick="close_nav()" style="padding: 0;border: none;background: none;"  ><font size="+2" onclick="close_nav()" ><b>X&nbsp</b></font> </button></div>
+            <li><a  href="index_tur.html">Anasayfa</a></li>
+            <li><a href="about_us.html">Hakkimizda</a></li>
+            <hr>
+            <li><a class="active" href="alphabet.html">Alfabe</a></li>
+            <li><a href="">Temeller</a></li>
+            <li><a href="">Sayılar</a></li>
+            <hr>
+            <li><a href="../index.html" onclick = 'langChange()'>Dil Seçimi</a></li>
+            
+            </ul>
+            </div>
+           
+        
+    </body>
+</html>
