@@ -5,55 +5,22 @@
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
   <title>TSL Tutor</title>
     
-  <!-- Navigation page + different styles-->
+  <!-- Navigation menu + different styles-->
   <link rel="stylesheet" type="text/css" href="../css/menu.css"/>
   <link rel="stylesheet" type="text/css" href="../css/eng_tur_main_pages.css">
+  <link rel="stylesheet" type="text/css" href="../css/general_contour.css">
   
   <!--Juery-->
   <script src="../js/jquery-3.1.0.min.js"></script>
   
-    <!-- Javascript checking if name is known or not-->
-  <script>
-      
-  //this bit checks if name of the user is known
-  $(document).ready(function(){
-    var u_name =localStorage.getItem('name');
-    if(u_name == null){    
-      $(".ask_name").show();
-    }
-    //if we know the name we just show him different sections to choose
-    else{
-      $(".rubric_choice").show();
-      $("#greeting").text("Hello, " + u_name + "!");
-    }
-  });
-            
-    //Javascript that deletes local storage data so that the name will be asked again if user wants to change it
-    function new_name(){
-      localStorage.removeItem('name');
-      location.reload();
-    }
-                
-    </script>
+  <!-- Javascript checking if name is known or not-->
+  <script src = "../js/user_name.js"></script>
     
-    <!--javascript which shows the name using sign language if users enters it -->   
-    <script src = "../js/name_in_sign.js"></script> 
-        
-    <!--javascript to control a navigation page-->        
-    <script>
-        
-    function open_nav(){                 
-      document.getElementsByClassName("navigation")[0].style.visibility = "visible";
-    }        
-            
-    function close_nav(){
-      document.getElementsByClassName("navigation")[0].style.visibility = "hidden";
-    }       
-
-    </script> 
+  <!--javascript which shows the name using sign language if users enters it -->   
+  <script src = "../js/name_in_sign.js"></script>         
     
-    <!--Closing navigation via swipe--> 
-    <script src="../js/swipe.js"></script>
+  <!--Closing navigation menu--> 
+  <script src="../js/close_menu.js"></script>
         
     <!-- javascript that allows to access index.html in order to change language preferences-->
     <script>
@@ -66,75 +33,78 @@
     
 <body>   
     
-        <!--table for layout-->
-        <table style="height:100%; bordercolor=black; width=100% ; background-color=purple;
+  <!--table for layout-->
+  <table style="height:100%; bordercolor=black; width=100% ; background-color=purple;
         position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
             
-        <!--upper row-->
-        <tr  style="background-color:#990066; height: 10%; width=100%">
-        <td> 
-          <!-- dashed button -->
-          <center>
-          <button class="nav_btn" onclick="open_nav()">
-          <img src="../images/dash_button.svg" width=30 height=35 alt="" >
-          </button>
-          </center>       
-        </td>  
+  <!--upper row-->
+      
+  <tr  style="background-color:#990066; height: 10%; width=100%">
+  <!-- dashed button -->
+  <td>     
+    <center>
+    <button class="nav_btn" onclick="open_nav()">
+    <img src="../images/dash_button.svg" width=30 height=35 alt="" >
+    </button>
+    </center>       
+  </td>  
+  
+  <!--headline-->         
+  <td width=100%>
+    <center>                
+    <font style ="color: rgba(0,0,0,0.6); text-shadow: 2px 2px 3px rgba(255,255,255,0.1);" size="+3" face="times"><b>TSL</b></font>    
+    </center>
+  </td>
             
-        <td width=100%>
-          <!--headline-->
-          <center>                
-          <font style ="color: rgba(0,0,0,0.6); text-shadow: 2px 2px 3px rgba(255,255,255,0.1);" size="+3" face="times"><b>TSL</b></font>    
-          </center>
-        </td>
+  </tr>     
+      
+  <!--bottom row-->
+      
+  <tr  style="height: 75%; width=100%">
+  <td colspan = 2 >
             
-        </tr>            
-        <!--bottom row-->
-        <tr  style="height: 75%; width=100%">
-        <td colspan = 2 >
-            
-          <!-- asking name -->
-          <div class = "ask_name"> 
-            <center>
-            <div id = "text_in_shape">
-              <font color = "#ffffff" size="+2">Your name?</font>
-            </div>  
-            <input type="text" id="name" size = "18" style = " font-size:17px; margin-left:4px; " onchange = "show_name(this.value)"/>
-            <br><br>
-            <img id = "sign" src = "../images/blank.JPG" height = "200px" width="200px">
-            </center>
-           </div>
+    <!-- asking name -->
+    <div class = "ask_name"> 
+      <center>
+      <div id = "text_in_shape">
+        <font color = "#ffffff" size="+2">Your name?</font>
+      </div>  
+      <input type="text" id="name" size = "18" style = " font-size:17px; margin-left:4px; " onchange = "show_name(this.value)"/>
+      <br><br>
+      <img id = "sign" src = "../images/blank.JPG" height = "200px" width="200px">
+      </center>
+    </div>
                 
-           <div class = "rubric_choice">
-             <b><p id = "greeting" style="font-size:120%;" onclick = "new_name()"></p></b>
-             <div id = "buttons">
-               <a href="alphabet.html" class="btn green">Alphabet</a>
-               <br>
-               <a href="#" class="btn green">Basics</a>
-               <br>
-               <a href="numbers/numbers.html" class="btn green">Numbers</a>
-              </div>
-           </div>
+    <div class = "rubric_choice">
+      <b><p id = "greeting" style="font-size:120%;" onclick = "new_name()"></p></b>
+      <div id = "buttons">
+        <a href="alphabet.html" class="btn green">Alphabet</a>
+        <br>
+        <a href="#" class="btn green">Basics</a>
+        <br>
+        <a href="numbers/numbers.html" class="btn green">Numbers</a>
+      </div>
+    </div>
             
-            </td>
-        </tr>          
+  </td>
+  </tr>          
             
-        </table>
+  </table>
     
-        <!-- Navigation page -->
-        <div class="navigation">
-          <ul>
-          <div align="right" style=" top:0%; "><button onclick="close_nav()" style="padding: 0;border: none;background: none;"  ><font size="+2" onclick="close_nav()" ><b>X&nbsp</b></font> </button></div>
-          <li><a class="active" href="index_eng.html">Home</a></li>
-          <li><a href="about_us.html">About Us</a></li>
-          <hr>
-          <li><a href="alphabet.html">Alphabet</a></li>
-          <li><a href="">Basics</a></li>
-          <li><a href="numbers/numbers.html">Numbers</a></li>
-          <hr>
-          <li><a href="../index.html" onclick = "langChange()">Language</a></li>
-          </ul>
-         </div>  
+  <!-- Navigation page -->
+  <div class="navigation">
+  <ul>
+    <div align="right" style=" top:0%; "><button onclick="close_nav()" style="padding: 0;border: none;background: none;"  ><font size="+2" onclick="close_nav()" ><b>X&nbsp</b></font> </button></div>
+    <li><a class="active" href="index_eng.html">Home</a></li>
+    <li><a href="about_us.html">About Us</a></li>
+    <hr>
+    <li><a href="alphabet.html">Alphabet</a></li>
+    <li><a href="">Basics</a></li>
+    <li><a href="numbers/numbers.html">Numbers</a></li>
+    <hr>
+    <li><a href="../index.html" onclick = "langChange()">Language</a></li>
+  </ul>
+  </div>  
         
 </body>
 </html>

@@ -1,3 +1,14 @@
+//THIS JAVASCRIPT CODE IS RESPONSIBLE FOR CLOSING THE NAVIGATION MENU
+
+//Closing using button
+function open_nav(){                 
+  document.getElementsByClassName("navigation")[0].style.visibility = "visible";
+}        
+function close_nav(){
+  document.getElementsByClassName("navigation")[0].style.visibility = "hidden";
+} 
+
+//Closing via SWIPE
 document.addEventListener('touchstart', handleTouchStart, false);        
 document.addEventListener('touchmove', handleTouchMove, false);
 
