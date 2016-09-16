@@ -1,170 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <title>TSL Tutor</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title>TSL Tutor</title>
+
+  <!-- Navigation page + different styles-->
+  <link rel="stylesheet" type="text/css" href="../css/general_contour.css">
+  <link rel="stylesheet" type="text/css" href="../css/menu.css"/>
         
-        <!-- some fancy styles-->
-        <style>
-        .nav_btn {
-            background-color: #990066; /* purple */            
-            border: none;
-            outline: none;
-            }
-        </style>
-        
-        
-        <!-- navigation page -->
-        <link rel="stylesheet" type="text/css" href="../css/menu.css"/>
-        <style>
-            
-        .navigation{
-                
-            visibility: hidden;
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            float: left;
-            position: fixed; 
-            top: 0; bottom: 0; left: 0; 
-            }
-       
-        
-        </style>
-        
-        <!-- center of the display -->
-         <style>
-       .letters{
-           width: 100%;
-           height: 100%;
-           top: 20%;
-           left: 15%
-           right: 15%;
-           text-align: center;
-           position: fixed;
-           font-size: 120%;
+  <!-- location of letters and page specific styles -->
+  <style>
+  .letters{
+    width: 100%;
+    height: 100%;
+    top: 20%;  
+    text-align: center;
+    position: fixed;
+    font-size: 120%;
            
-       }
+  }
              
-             td{
-                 text-align: center;
-             }
+  td{
+    text-align: center;
+  }
              
-        /* css for letters */
-        .inactive {color:blue; text-decoration: underline}
-        .selected {color:red;}
-        .wait_click{pointer-events: none;}
-        
-        table {
-            border-collapse: separate;
-            border-spacing: 0;
-             }
+  /* css for letters */
+  .inactive {color:blue; text-decoration: underline}
+  .selected {color:red;}
+  .wait_click{pointer-events: none;}
              
-        </style>        
+  </style>        
         
-        <!-- Importing JQuery -->
-        <script src="../js/jquery-3.1.0.min.js"></script>
+  <!--JQuery -->
+  <script src="../js/jquery-3.1.0.min.js"></script>
+  <!--javascript to control a navigation page-->
         
-        <!--javascript to control a navigation page-->
-        
-        
-        <script>
-            
-            function open_nav(){                 
-                
-               document.getElementsByClassName("navigation")[0].style.visibility = "visible";
-            }        
-            
-            function close_nav(){
-                document.getElementsByClassName("navigation")[0].style.visibility = "hidden";
-            }
-        
-        </script> 
-        <script src="../js/swipe.js"></script>
-        
-        <!-- javascript allowing to access the language change page-->
-        <script>
-        function langChange(){
-            localStorage.setItem('lang', 0);
-        }
-        </script>
-        <!-- Javascript to control the selection of letter -->
-        <script>
-        $(document).ready(function(){
-            $(".letters a").addClass('inactive');
-            $("#a_ltr").addClass('selected');
-            $( "a" ).click(function() {  
-                $("a").removeClass('selected');                
-                $( this ).addClass('selected');
-                
-                //manipulating with images
-                var letter = $(this).text();
-                if(letter == "Ö" ){ 
-                    $("a").addClass("wait_click");// so that user doesn't click another letter before  gesture wasn't showed fully                    
-                    $("#sign").attr("src","../images/gestures/O-1.jpg")
-                    setTimeout(function(){                        
-                        $("#sign").attr("src","../images/gestures/O-2.jpg") 
-                        $("a").removeClass("wait_click");
-                    }, 1000);                       
-                                      
-                    
-                }
-                
-                else if(letter == "Y"){
-                    $("a").addClass("wait_click");// so that user doesn't click another letter before  gesture wasn't showed fully
-                    $("#sign").attr("src","../images/gestures/Y.jpg")
-                    setTimeout(function(){                        
-                        $("#sign").attr("src","../images/gestures/Y2.jpg") 
-                        $("a").removeClass("wait_click");
-                    }, 1000);      
-                }
-                
-                else if(letter == "Ü"){
-                    $("a").addClass("wait_click");// so that user doesn't click another letter before  gesture wasn't showed fully
-                    $("#sign").attr("src","../images/gestures/U-1.jpg")
-                    setTimeout(function(){                        
-                        $("#sign").attr("src","../images/gestures/U-2.jpg") 
-                        $("a").removeClass("wait_click");
-                    }, 1000); 
-                }
+  <!--Controlling navigation menu--> 
+  <script src="../js/control_menu.js"></script>
+  <script src="../js/swipe.js"></script>
+  
+  <!-- javascript allowing to access the language change page-->
+  <script>
+    function langChange(){
+      localStorage.setItem('lang', 0);
+    }
+  </script>
+  
+  <!-- Javascript matching letters with gestures -->
+  <script src="../js/matching_alphabet.js"></script>
     
-                else if(letter == "Ç"){
-                    $("#sign").attr("src","../images/gestures/C-.jpg")
-                }
-                
-                else if(letter == "Ş"){
-                    $("#sign").attr("src","../images/gestures/S-.jpg")
-                }
-                else if(letter == "Ğ"){
-                    $("#sign").attr("src","../images/gestures/G-.jpg")
-                }
-                
-                else if(letter == "İ"){
-                    $("#sign").attr("src","../images/gestures/I-.jpg")
-                }
-                
-                else if(letter == "J" ){
-                    $("a").addClass("wait_click");// so that user doesn't click another letter before  gesture wasn't showed fully
-                    $("#sign").attr("src","../images/gestures/J.jpg")
-                    setTimeout(function(){          
-                    $("#sign").attr("src","../images/gestures/J-1.jpg")          
-                    }, 1000);                                     
-                    setTimeout(function(){          
-                    $("#sign").attr("src","../images/gestures/J-2.jpg") 
-                    $("a").removeClass("wait_click");
-                    }, 2000);
-                    }
-                
-                
-                else{
-                   $("#sign").attr("src","../images/gestures/" + letter +".jpg"); 
-                }   
-                               
-                
-            });
-        });
+  <script>
             
         //Function playing sound
         function playAudio(src) {
