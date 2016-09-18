@@ -1,145 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-<title>TSL Tutor</title>
-        
-<!-- navigation menu and table-->
-<style>
-.nav_btn {
-  background-color: #990066; /* purple */            
-  border: none;
-  outline: none;
-            }
-        </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title>TSL Tutor</title>
+  
+  <!-- navigation + play button + teaching numbers relates css files-->
+  <link rel="stylesheet" type="text/css" href="../../css/general_contour.css">
+  <link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
+  <link rel="stylesheet" type="text/css" href = "../../css/play_btn.css">
+  <link rel="stylesheet" type="text/css" href="../css/number_navigation.css">  
+  <link rel="stylesheet" type="text/css" href="../css/teaching_numbers.css">  
     
-  <!--Teaching numbers-->
-  <style>
-  .num_teaching{
-     width: 100%;
-    height: 100%;
-    top: 35%;
-    text-align: center;
-    position: fixed;
-    display:none;
-      }
-  </style>
+  <!--Controlling navigation menu + jquery--> 
+  <script src = "../../js/jquery-3.1.0.min.js"></script>
+  <script src="../../js/control_menu.js"></script>
+  <script src="../../js/swipe.js"></script>
+    
 
+  <!-- javascript allowing to access the language change page-->
+  <script>
+  function langChange(){
+    localStorage.setItem('lang', 0);
+  }
+  </script>
         
+  <!--Javascript teaching numbers in sign language-->
+  <script>
+  $(document).ready(function(){
+    $("#play").click(function(){
+      function start_tutorial(){
+        alert("hi");
+      }
+      setTimeout(start_tutorial, 150);
+    });
+  })
+  </script>
         
-        <!-- navigation page -->
-        <link rel="stylesheet" type="text/css" href="../../css/general_contour.css">
-        <link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
-        <link rel="stylesheet" type="text/css" href = "../../css/play_btn.css">
-        <link rel="stylesheet" type="text/css" href="../css/number_navigation.css">
-        
-        
-        <!--Controlling navigation menu--> 
-        <script src="../js/control_menu.js"></script>
-        <script src="../js/swipe.js"></script>
+</head>
     
-        <!-- javascript allowing to access the language change page-->
-        <script>
-        function langChange(){
-            localStorage.setItem('lang', 0);
-        }
-        </script>
-        
-        <script src = "../../js/jquery-3.1.0.min.js"></script>
-        <!--Javascript teaching numbers in sign language-->
-        <script>
-        $(document).ready(function(){
-          $("#play").click(function(){
-            
-            function explode(){
-             $(".nums").hide();$(".num_teaching").show();
-            }
-            setTimeout(explode, 150);
-            
-        });
-        })
-        </script>
-        
-        
-       
-        
-    </head>
-    <body>   
-        
-            
-        <!--table for making-->
-        <table style="height:100%; bordercolor=black; width=100% ; background-color=purple;
+<body>   
+  <!--table for general layout-->
+  <table style="height:100%; bordercolor=black; width=100% ; background-color=purple;
         position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+  
+  <!--upper row-->
+  <tr  style="background-color:#990066; height: 10%; width=100%">
+      
+  <!-- dashed button -->
+  <td> 
+    <button class="nav_btn" onclick="open_nav()">
+    <img src="../../images/dash_button.svg"  width=30 height=35 alt="">
+    </button>
+  </td> 
+      
+  <!--headline-->
+  <td width=100%>
+    <center><font  style ="color: rgba(0,0,0,0.6); text-shadow: 2px 2px 3px rgba(255,255,255,0.1);" size="+3" face="times"><b>TSL</b></font></center>
+  </td>
+  
+  </tr>
             
-        <!--upper row-->
-        <tr  style="background-color:#990066; height: 10%; width=100%">
-        <td> 
-              <!-- dashed button -->
-            <center>
-            <button class="nav_btn" onclick="open_nav()">
-            <img src="../../images/dash_button.svg"  width=30 height=35 alt="">
-            </button>
-            </center>        
-            
-        </td> 
-            
-        <td width=100%>
-            <!--headline-->
-            <center>                
-            <font style ="color: rgba(0,0,0,0.6); text-shadow: 2px 2px 3px rgba(255,255,255,0.1);" size="+3" face="times"><b>TSL</b></font>    
-            </center>
-        </td>
-        </tr>
-            
-        <!--bottom row-->
-        <tr  style="height: 75%; width=100%">
-            <td colspan = 2 >
-                
-            <!-- navigation in numbers section -->
-            <div class = "num_navigation"> 
-                <table style="width:100%;" >
-                <tr>
-                <td class = "current_num_page" style = "width:25%;"><button style="width:100%; height:35px;right:4.2px; ">0 - 10</button></td>
-                <td style = "width:25%"><button style="width:100%; height:35px;right:2px;">10 - 90</button></td>
-                <td style = "width:25%" style = "width:25%"><button style="width:100%; height:35px;right:2px;">100 - 1000</button></td>
-                </tr>
-                </table>
-            
-            </div>
-                
-                
-            <div class = "nums"> 
-               <figure>
-               <button name="play" id="play"></button>
-               </figure>
-            </div>
-                
-            <div class="num_teaching">
-                Hello world
-            </div>
-              
-            </td>
-        </tr>          
-            
-        </table>
-        
-         <div class="navigation">
-                
-            <ul>
-            <!-- <li><a href="sign_in.html">Sign In</a></li> -->
-            <div align="right" style=" top:0%; "><button onclick="close_nav()" style="padding: 0;border: none;background: none;"  ><font size="+2" onclick="close_nav()" ><b>X&nbsp</b></font> </button></div>
-            <li><a href="../index_eng.html">Home</a></li>
-            <li><a href="../about_us.html">About Us</a></li>
-            <hr>
-            <li><a href="../alphabet.html">Alphabet</a></li>
-            <li><a href="">Basics</a></li>
-            <li><a class="active" href="">Numbers</a></li>
-            <hr>
-            <li><a href="../../index.html" onclick = "langChange()">Language</a></li>
-            
-            </ul>
-            </div>
+  <!--bottom row-->
+  <tr style="height: 75%; width=100%">
+  <td valign="top" colspan = 2 > 
+    <!-- navigation in numbers section --> 
+      <table class="num_navigation" >
+      <tr>
+        <td class = "current_num_page" style = "width:25%;"><button style="width:100%; height:100%;right:2.2px; ">0 - 10</button></td>
+        <td style = "width:25%"><button style="width:100%; height:100%;right:2px;">10 - 90</button></td>
+        <td style = "width:25%" style = "width:25%"><button style="width:100%; height:100%;right:2px;">100 - 1000</button></td>
+      </tr>
+      </table>      
+      
+    <!--play button-->
+    <div class = "teaching_nums">
+      <figure name="play">
+      <button name="play" id="play"></button>
+      </figure>
+    </div>
+      
+  </td>
+  </tr>          
+  </table>
+    
+  <!---------------------------------------------------------------------------------------------------------------------------->      
+  <div class="navigation">
+  <ul>
+  <div align="right" style=" top:0%; "><button onclick="close_nav()" style="padding: 0;border: none;background: none;"  ><font size="+2" onclick="close_nav()" ><b>X&nbsp</b></font> </button></div>
+  <li><a href="../index_eng.html">Home</a></li>
+  <li><a href="../about_us.html">About Us</a></li>
+  <hr>
+  <li><a href="../alphabet.html">Alphabet</a></li>
+  <li><a href="">Basics</a></li>
+  <li><a class="active" href="">Numbers</a></li>
+  <hr>
+  <li><a href="../../index.html" onclick = "langChange()">Language</a></li>
+  </ul>
+  </div>
            
-    </body>
+</body>
 </html>
