@@ -34,46 +34,31 @@
         $(".digits").show();
         $(".equality").show();
         $(".gestures").show();
+        
+        $(".digits").text(11);
+        $(".gestures img").attr("src","../../images/gestures/numbers/11a.jpg")
+        var number = 11;
+        setInterval(function () {
+        if(number<=15){
+          $(".digits").text(number);
+          $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg")
+          setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"b.jpg")         
+          }, 2000);
+          setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg")         
+          }, 3000);
+          setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"b.jpg")
+          }, 4000);
+           setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg") 
+            number += 1;
+          }, 5000);
           
-        for(number=0;number<=10;number++){
-          window.setTimeout(
-            (function (number){ 
-              return function() {
-                  
-                $(".digits").text(number);
-                if(number==0){
-                  $(".gestures img").attr("src","../../images/gestures/O.jpg");
-                }
-                else if(number==7 || number==8){
-                    
-                  $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg")
-                  setTimeout(function(){         
-                    $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"b.jpg")         
-                  }, 1000);  
-                    
-                }
-                  
-                else if(number==10){
-                  $(".gestures img").attr("src","../../images/gestures/numbers/10a.jpg")
-                  setTimeout(function(){         
-                    $(".gestures img").attr("src","../../images/gestures/numbers/10b.jpg")         
-                  }, 1000);
-                  setTimeout(function(){         
-                    $(".gestures img").attr("src","../../images/gestures/numbers/10c.jpg")         
-                  }, 2000); 
-                  setTimeout(function(){
-                    location.reload();
-                  },4000);
-                }
-                else{
-                  $(".gestures img").attr("src","../../images/gestures/numbers/"+number+".jpg");
-                }
-                  
-                
-                  
-              }
-          })(number),number * 3500)
         }
+        },6000);
+          
       }
       setTimeout(start_tutorial, 150);
     });
@@ -110,8 +95,8 @@
     <!-- navigation in numbers section, table is used to make a layout simpler --> 
       <table class="num_navigation" >
       <tr>
-        <td class = "current_num_page" style = "width:33.3%;"><button style="width:100%; height:100%;right:2.2px;" onclick="location.reload();">0 - 10</button></td>
-        <td style = "width:33.3%"><button style="width:100%; height:100%;right:2px;" onclick="window.location.href='numbers2.html'">10 - 90</button></td>
+        <td style = "width:33.3%;"><button style="width:100%; height:100%;right:2.2px;" onclick="window.location.href='numbers.html'">0 - 10</button></td>
+        <td class = "current_num_page" style = "width:33.3%"><button style="width:100%; height:100%;right:2px;" onclick="location.reload();">10 - 90</button></td>
         <td style = "width:33.3%" ><button style="width:100%; height:100%;right:2px;">100 - 1000</button></td>
       </tr>
       </table>  
