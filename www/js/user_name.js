@@ -9,7 +9,13 @@
     //if we know the name we just show him different sections to choose
     else{
       $(".rubric_choice").show();
-      $("#greeting").text("Hello, " + u_name + "!");
+      if(window.location.href.indexOf("eng") > -1){
+        var say_hi = "Hello, "
+      }
+      else{
+        say_hi = "Merhaba, ";
+      }
+      $("#greeting").text(say_hi + u_name + "!");
     }
   });
             

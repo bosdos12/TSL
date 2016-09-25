@@ -67,6 +67,9 @@
         <!-- Importing JQuery -->
         <script src="../js/jquery-3.1.0.min.js"></script>
         
+        <!-- language -->
+        <script src = "../js/change_lang.js"></script>
+        
         <!--javascript to control a navigation page-->
         
         
@@ -122,11 +125,18 @@
             <font style ="color: rgba(0,0,0,0.6); text-shadow: 2px 2px 3px rgba(255,255,255,0.1);" size="+3" face="times"><b>TID&nbsp&nbsp&nbsp</b></font>    
             </center>
         </td>
+            
+        <td>
+          <center>
+          <img onclick="change_lang()" src="../images/EnglishFlag.PNG" height="38px">
+          </center>
+        </td> 
+            
         </tr>
             
         <!--bottom row-->
         <tr  style="height: 75%; width=100%">
-            <td colspan = 2 >
+            <td colspan = 3 >
                 
             <!-- asking name -->
                 
@@ -203,7 +213,7 @@
             <hr>
             <li><a class="active" href="alphabet.html">Alfabe</a></li>
             <li><a href="">Temeller</a></li>
-            <li><a href="">Sayılar</a></li>
+            <li><a href="numbers/numbers.html">Sayılar</a></li>
             <hr>
             <li><a href="../index.html" onclick = 'langChange()'>Dil Seçimi</a></li>
             

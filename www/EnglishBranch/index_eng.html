@@ -21,6 +21,9 @@
     
   <!--Controlling navigation menu--> 
   <script src="../js/control_menu.js"></script>
+    
+  <!-- language -->
+  <script src = "../js/change_lang.js"></script>
         
     <!-- javascript that allows to access index.html in order to change language preferences-->
     <script>
@@ -52,16 +55,24 @@
   <!--headline-->         
   <td width=100%>
     <center>                
-    <font style ="color: rgba(0,0,0,0.6); text-shadow: 2px 2px 3px rgba(255,255,255,0.1);" size="+3" face="times"><b>TSL&nbsp&nbsp&nbsp</b></font>    
+    <font style ="color: rgba(0,0,0,0.6); text-shadow: 2px 2px 3px rgba(255,255,255,0.1);" size="+3" face="times"><b>TSL</b></font>    
     </center>
   </td>
+      
+  <!--language preferences-->         
+  <td>
+    <center>
+    <img onclick="change_lang()" src="../images/TurkishFlag.PNG" height="38px">
+    </center>
+  </td>      
+      
             
   </tr>     
       
   <!--bottom row-->
       
   <tr  style="height: 75%; width=100%">
-  <td colspan = 2 >
+  <td colspan = 3 >
             
     <!-- asking name -->
     <div class = "ask_name"> 
