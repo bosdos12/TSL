@@ -9,8 +9,8 @@
   <link rel="stylesheet" type="text/css" href="../../css/general_contour.css">
   <link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
   <link rel="stylesheet" type="text/css" href = "../../css/play_btn.css">
-  <link rel="stylesheet" type="text/css" href="../css/number_navigation.css">  
-  <link rel="stylesheet" type="text/css" href="../css/teaching_numbers.css">  
+  <link rel="stylesheet" type="text/css" href="../../css/number_navigation.css">  
+  <link rel="stylesheet" type="text/css" href="../../css/teaching_numbers.css">  
     
   <!--Controlling navigation menu + jquery--> 
   <script src = "../../js/jquery-3.1.0.min.js"></script>
@@ -37,9 +37,10 @@
         
         $(".digits").text(11);
         $(".gestures img").attr("src","../../images/gestures/numbers/11a.jpg")
+        
         var number = 11;
         setInterval(function () {
-        if(number<=15){
+        if(number<=15 || number==20){
           $(".digits").text(number);
           $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg")
           setTimeout(function(){         
@@ -54,9 +55,44 @@
            setTimeout(function(){         
             $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg") 
             number += 1;
-          }, 5000);
+          }, 5000); 
           
         }
+        else if(number==16 || number==19){
+          $(".digits").text(number);
+          $(".gestures img").attr("src","../../images/gestures/numbers/10a.jpg")
+           setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/10b.jpg")         
+          }, 2000);
+          setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/10c.jpg")         
+          }, 3000);
+          setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/"+(number-10)+".jpg")
+            number += 1;
+          }, 4000);
+         }
+            
+        else if(number==17 || number==18){
+          $(".digits").text(number);
+          $(".gestures img").attr("src","../../images/gestures/numbers/10a.jpg")
+           setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/10b.jpg")         
+          }, 2000);
+          setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/10c.jpg")         
+          }, 3000);
+          setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/" + (number-10) + "a.jpg")
+          }, 4000); 
+         
+          setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/" + (number-10) + "b.jpg")
+            number += 1;
+          }, 5000);      
+        }
+        
+            
         },6000);
           
       }
