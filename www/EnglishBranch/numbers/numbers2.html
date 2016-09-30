@@ -37,13 +37,14 @@
         $(".digits").show();
         $(".equality").show();
         $(".gestures").show();
+        $(".number_table").show();
         
         $(".digits").text(11);
         $(".gestures img").attr("src","../../images/gestures/numbers/11a.jpg")
         
         var number = 11;
         setInterval(function () {
-        if(number<=15 || number==20){
+        if(number<=15){
           $(".digits").text(number);
           $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg")
           setTimeout(function(){         
@@ -93,6 +94,24 @@
             $(".gestures img").attr("src","../../images/gestures/numbers/" + (number-10) + "b.jpg")
             number += 1;
           }, 5000);      
+        }
+            
+        else if(number>=20 && number<=50 ){
+          $(".digits").text(number);
+          $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg")
+          setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"b.jpg")         
+          }, 2000);
+          setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg")         
+          }, 3000);
+          setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"b.jpg")
+          }, 4000);
+           setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg") 
+            number += 10;
+          }, 5000);  
         }
         
             
@@ -147,28 +166,20 @@
       </table>  
       
       <!--play button-->
+      
       <div class = "teaching_nums">
         <figure name="play">
         <button name="play" id="play"></button>
-        </figure>
-        
-        <!--process of teaching numbers itself
-        <!-- Left hand side = digits -->
-        <div class="digits">
-          
-        </div>
-      
-        <!-- center is equality sign -->
-        <div class="equality">
-          =
-        </div>
-      
-        <!-- gesture -->
-        <div class="gestures">
-          <img src="../../images/blank.JPG" width="130px" height="130px"> 
-        </div>
-          
+        </figure>          
       </div>
+      
+      <table class="number_table" >
+      <tr>
+        <td style = "width:33.3%;"><div class="digits"></div></td>
+        <td style = "width:33.3%;"><div class="equality">=</div></td>
+        <td style = "width:33.3%;"><div class="gestures"><img src="../../images/blank.JPG" width="130px" height="130px"></div></td>
+      </tr>
+      </table>  
       
           
   </td>
