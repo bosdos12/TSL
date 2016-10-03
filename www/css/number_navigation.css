@@ -12,7 +12,7 @@
 }
 
 .num_navigation button{
-  background-color: #009933;
+  background-color: #006600;/*009933;*/
   border-radius: 2px;
   text-decoration: none;
   margin: 2px;
@@ -30,5 +30,5 @@
 }
              
 .current_num_page button{
-  background-color:#48E68B;
+  background-color:#00CC66;
 }

@@ -60,10 +60,10 @@
           }
              
         .green {
-            background-color:  #009933;
+            background-color: #006600; /*#009933;*/
             box-shadow: 0px 5px 0px 0px #006633;
           }
 
         .green:hover {
-            background-color: #48E68B;
+            background-color: #3e8e41;
           }               
