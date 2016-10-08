@@ -18,7 +18,8 @@ They can't find friends, can't find love, can't even talk to a random person. <b
 </p>
 
 <p>
-<b>What can we do?</b><br>
+<h2><b>What can we do?</b></h2>
+<br>
 Well, as cool programmists we need to create a simple and friendly app that people may have on their mobile phones and use on their way to school, home, pub or somewhere else
 
 </p>
