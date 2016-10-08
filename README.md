@@ -17,9 +17,10 @@ Ignorance is a major issue and someone should popularise Sign Language in these 
 They can't find friends, can't find love, can't even talk to a random person. <b>If we don't go into action these people may be doomed to loneliness!</b>
 </p>
 
-<p>
+
 <h3>What can we do?</h3>
-Well, as cool programmists we need to create a simple and friendly app that people may have on their mobile phones and use on their way to school, home, pub or somewhere else
+<p>
+Well, as cool programmists we need to create a simple and friendly app that people may have on their mobile phones and use on their way to school, home, pub or somewhere else. 
 
 </p>
 
