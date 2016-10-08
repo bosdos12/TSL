@@ -34,6 +34,10 @@ We will start simple and then will make app more and more advanced. My main visi
 Clone this repository to your computer and then go to www folder and press index.html and contemplate the app. For additional information on how app works and how it is converted from web app to the mobile go to info/Project Structue
 </p>
 
+<p>
+Never hesitate to contact me on anarkazimov98@gmail.com
+</p>
+
 <h3>Final words!</h3>
 <p>
 We are the ones who can make the difference.
