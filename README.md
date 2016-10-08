@@ -19,10 +19,13 @@ They can't find friends, can't find love, can't even talk to a random person. <b
 
 
 <h3>What can we do?</h3>
+
 <p>
 Well, as cool programmists we need to create a simple and friendly app that people may have on their mobile phones and use on their way to school, home, pub or somewhere else. 
-
 </p>
+
+<p>
+We will start simple and then will make app more and more advanced. My main vision is this: <sup>simple tutor app</sup> -> tutor app + sign chat (you send message in text it comes in signs) + no ads or moetisation (completely free/at least for first year :) )
 
 
 <h3>References</h3>
