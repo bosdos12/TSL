@@ -1,7 +1,13 @@
-# TSL
-Turkish Sign Language
-This project aims to popularise TSL which has very little published information and doesn't allow Turkish deaf people to effectively speak in Turkey itself. This app will be teaching TSL in both English and Turkish languages.
+# TSL Tutor App
 
-To understand how bad the situation with Turkish sign language is you can watch the following video:
-https://www.youtube.com/watch?v=oeqcvmxGJfw&feature=youtu.be&list=LL1myDLXIJBVylUivV8VoxNw
+Hi there. We are Software Gates and we are here for a reason!
+Have you heard about Turkish Sign Language? Well, better late than never!
+Turkish Sign Language is a pretty simple language that doesn't really require knowledge of Turkish to learn it. But the problem with it is that it has very few published information especially in English.<sup>[1]</sup>
+
+
+
+
+
+
+[1] https://en.wikipedia.org/wiki/Turkish_Sign_Language
 
