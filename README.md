@@ -25,7 +25,7 @@ Well, as cool programmists we need to create a simple and friendly app that peop
 </p>
 
 <p>
-We will start simple and then will make app more and more advanced. My main vision is this: simple tutor app --> tutor app + sign chat (you send message in text it comes in signs) + no ads or monetisation (completely free/at least for first year :) )
+We will start simple and then will make app more and more advanced. Our main vision is this: simple tutor app --> tutor app + sign chat (you send message in text it comes in signs) + no ads or monetisation (completely free/at least for first year :) )
 </p>
 
 <h3>How to start</h3>
@@ -35,7 +35,7 @@ Clone this repository to your computer and then go to www folder and press index
 </p>
 
 <p>
-Never hesitate to contact me on anarkazimov98@gmail.com
+Never hesitate to contact our leader - Anar Kazimov(anarkazimov98@gmail.com)
 </p>
 
 <h3>Final words!</h3>
