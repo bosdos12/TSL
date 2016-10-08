@@ -1,7 +1,7 @@
 # TSL Tutor App
 
 Hi there. We are Software Gates and we are here for a reason!<br>
-Have you ever heard about Turkish Sign Language?<br>
+<marquee>Have you ever heard about Turkish Sign Language?</marquee><br>
 <b>Well, better late than never!</b><br>
 <br>
 Turkish Sign Language is a pretty simple non-verbal language that doesn't really require knowledge of Turkish to learn it. But the problem with it is that it has very few published information especially in English<sup>[1]</sup>.<br>
