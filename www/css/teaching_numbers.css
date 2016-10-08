@@ -14,24 +14,19 @@
   text-align: center;
   position: fixed;
   top:50%;
-  display:none;
+  
 }
 
 .digits{
   
   font-size:350%;
   font-weight: bold;
-  display: none;
+  
 }
 
 .equality{
   
   font-size:350%;
   font-weight: bold;
-  display:none;
-}
-
-.gestures{
-  display:none;
-    
+  
 }

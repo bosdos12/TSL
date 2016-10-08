@@ -12,24 +12,23 @@ table {
 
 .layout_table{
   height:100%;  
-  width=100% ; 
+  width:auto; 
   position: absolute; top: 0; bottom: 0; left: 0; right: 0; 
 }
 
-  
 
-          
-   .navigation{
-     visibility: hidden;
-     height: 100%;
-     width: 100%;
-     margin: 0;
-     padding: 0;
-     float: left;
-     position: fixed; 
-     top: 0; bottom: 0; left: 0; 
-     }
 
-    .navigation button{
-      outline:none;
-    }
+.navigation{
+  visibility: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  float: left;
+  position: fixed; 
+  top: 0; bottom: 0; left: 0; 
+}
+
+.navigation button{
+  outline:none;
+}

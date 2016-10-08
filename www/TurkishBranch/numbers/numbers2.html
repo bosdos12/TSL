@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-  <title>TSL Tutor</title>
   
   <!-- navigation + play button + teaching numbers relates css files-->
   <link rel="stylesheet" type="text/css" href="../../css/general_contour.css">
   <link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
-  <link rel="stylesheet" type="text/css" href = "../../css/play_btn.css">
   <link rel="stylesheet" type="text/css" href="../../css/number_navigation.css">  
   <link rel="stylesheet" type="text/css" href="../../css/teaching_numbers.css">  
+  <style>
+  .wait_click{pointer-events: none;}
+  </style>
     
   <!--Controlling navigation menu + jquery--> 
   <script src = "../../js/jquery-3.1.0.min.js"></script>
@@ -30,21 +31,32 @@
         
   <!--Javascript teaching numbers in sign language-->
   <script>
-  $(document).ready(function(){
-    $("#play").click(function(){
-      function start_tutorial(){
-        $("#play").hide();
-        $(".digits").show();
-        $(".equality").show();
-        $(".gestures").show();
+    $( document ).ready(function() {
+      number = 11
         
-        $(".digits").text(11);
-        $(".gestures img").attr("src","../../images/gestures/numbers/11a.jpg")
+      $( "#l_arr" ).click(function() {
+        if(number != 11 && number < 20){
+          number -= 1; 
+        }
+        else if(number>=30 && number <= 100){
+          number -= 10
+        }
+      });
         
-        var number = 11;
-        setInterval(function () {
-        if(number<=15 || number==20){
-          $(".digits").text(number);
+      $("#r_arr").click(function(){
+        if(number<20){
+          number += 1;  
+        }
+        else if(number >= 20){
+          number += 10;
+        }
+      });
+        
+      $(".teaching_nums").click(function() {
+        $(".digits").text(number);
+          
+        if(number<=15){
+          $("#r_arr, #l_arr").addClass("wait_click");
           $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg")
           setTimeout(function(){         
             $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"b.jpg")         
@@ -56,13 +68,13 @@
             $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"b.jpg")
           }, 4000);
            setTimeout(function(){         
-            $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg") 
-            number += 1;
+            $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg")
+            $("#r_arr, #l_arr").removeClass("wait_click");
           }, 5000); 
+                }
           
-        }
-        else if(number==16 || number==19){
-          $(".digits").text(number);
+          else if(number==16 || number==19){
+          $("#r_arr, #l_arr").addClass("wait_click");
           $(".gestures img").attr("src","../../images/gestures/numbers/10a.jpg")
            setTimeout(function(){         
             $(".gestures img").attr("src","../../images/gestures/numbers/10b.jpg")         
@@ -72,12 +84,12 @@
           }, 3000);
           setTimeout(function(){         
             $(".gestures img").attr("src","../../images/gestures/numbers/"+(number-10)+".jpg")
-            number += 1;
+            $("#r_arr, #l_arr").removeClass("wait_click");
           }, 4000);
          }
             
         else if(number==17 || number==18){
-          $(".digits").text(number);
+          $("#r_arr, #l_arr").addClass("wait_click");
           $(".gestures img").attr("src","../../images/gestures/numbers/10a.jpg")
            setTimeout(function(){         
             $(".gestures img").attr("src","../../images/gestures/numbers/10b.jpg")         
@@ -91,25 +103,81 @@
          
           setTimeout(function(){         
             $(".gestures img").attr("src","../../images/gestures/numbers/" + (number-10) + "b.jpg")
-            number += 1;
+            $("#r_arr, #l_arr").removeClass("wait_click");
           }, 5000);      
         }
-        
-            
-        },6000);
           
-      }
-      setTimeout(start_tutorial, 150);
+          else if(number>=20 && number<=50 ){
+          $("#r_arr, #l_arr").addClass("wait_click");
+          $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg")
+          setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"b.jpg")         
+          }, 2000);
+          setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg")         
+          }, 3000);
+          setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"b.jpg")
+          }, 4000);
+           setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg") 
+            $("#r_arr, #l_arr").removeClass("wait_click");
+          }, 5000);  
+        }
+          
+        else if(number == 60 || number == 90){
+           $("#r_arr, #l_arr").addClass("wait_click");
+          $(".gestures img").attr("src","../../images/gestures/numbers/"+(number/10)+".jpg")
+          setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/O.jpg") 
+            $("#r_arr, #l_arr").removeClass("wait_click");
+          }, 2000);
+        }
+          
+          else if(number == 70 || number == 80){
+              $("#r_arr, #l_arr").addClass("wait_click");
+          $(".gestures img").attr("src","../../images/gestures/numbers/"+(number/10)+"a.jpg") ;
+              
+          setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/"+(number/10)+"b.jpg");
+          }, 2500);  
+              
+          setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/O.jpg") 
+            $("#r_arr, #l_arr").removeClass("wait_click");
+          }, 4000);
+          }
+          
+          
+          else if(number == 100){
+            $("#r_arr, #l_arr").addClass("wait_click");
+            $(".gestures img").attr("src","../../images/gestures/numbers/100a.jpg") ;
+            
+            setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/100b.jpg");
+          }, 2500); 
+              
+             setTimeout(function(){         
+            $(".gestures img").attr("src","../../images/gestures/numbers/100c.jpg") 
+            $("#r_arr, #l_arr").removeClass("wait_click");
+          }, 4000);
+              
+          }
+          
+          
+          
+          
+          
+      });
+        
     });
-  })
   </script>
         
 </head>
     
 <body>   
   <!--table for general layout-->
-  <table style="height:100%; bordercolor=black; width=100% ; background-color=purple;
-        position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+  <table class = "layout_table">
   
   <!--upper row-->
   <tr  style="background-color:#663300; height: 10%; width=100%">
@@ -141,34 +209,28 @@
       <table class="num_navigation" >
       <tr>
         <td style = "width:33.3%;"><button style="width:100%; height:100%;right:2.2px;" onclick="window.location.href='numbers.html'">0 - 10</button></td>
-        <td class = "current_num_page" style = "width:33.3%"><button style="width:100%; height:100%;right:2px;" onclick="location.reload();">10 - 90</button></td>
+        <td class = "current_num_page" style = "width:33.3%"><button style="width:100%; height:100%;right:2px;" onclick="location.reload();">10 - 100</button></td>
         <td style = "width:33.3%" ><button style="width:100%; height:100%;right:2px;">100 - 1000</button></td>
       </tr>
-      </table>  
+      </table>   
       
-      <!--play button-->
+      <!--buttons for letters control-->
+      
       <div class = "teaching_nums">
-        <figure name="play">
-        <button name="play" id="play"></button>
-        </figure>
-        
-        <!--process of teaching numbers itself
-        <!-- Left hand side = digits -->
-        <div class="digits">
-          
-        </div>
+        <center>
+        <img id = "l_arr" src="../../images/left_arrow.JPG" height="50px" width="50px">
+        &nbsp&nbsp&nbsp
+        <img id = "r_arr" src="../../images/right_arrow.JPG" height="50px" width="50px">
+        </center>
+      </div>  
       
-        <!-- center is equality sign -->
-        <div class="equality">
-          =
-        </div>
-      
-        <!-- gesture -->
-        <div class="gestures">
-          <img src="../../images/blank.JPG" width="130px" height="130px"> 
-        </div>
-          
-      </div>
+      <table class="number_table" >
+      <tr>
+        <td style = "width:33.3%;"><div class="digits">11</div></td>
+        <td style = "width:33.3%;"><div class="equality">=</div></td>
+        <td style = "width:33.3%;"><div class="gestures"><img src="../../images/gestures/numbers/11a.jpg" width="130px" height="130px"></div></td>
+      </tr>
+      </table>      
       
           
   </td>

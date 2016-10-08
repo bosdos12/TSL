@@ -8,9 +8,11 @@
   <!-- navigation + play button + teaching numbers relates css files-->
   <link rel="stylesheet" type="text/css" href="../../css/general_contour.css">
   <link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
-  <link rel="stylesheet" type="text/css" href = "../../css/play_btn.css">
   <link rel="stylesheet" type="text/css" href="../../css/number_navigation.css">  
   <link rel="stylesheet" type="text/css" href="../../css/teaching_numbers.css">  
+  <style>
+  .wait_click{pointer-events: none;}
+  </style>
     
   <!--Controlling navigation menu + jquery--> 
   <script src = "../../js/jquery-3.1.0.min.js"></script>
@@ -28,40 +30,49 @@
   </script>
         
   <!--Javascript teaching numbers in sign language-->
-  <script>
-  $(document).ready(function(){
-    $("#play").click(function(){
-      function start_tutorial(){
-        $("#play").hide();
-        $(".digits").show();
-        $(".equality").show();
-        $(".gestures").show();
-          
-        for(number=0;number<=10;number++){
-          window.setTimeout(
-            (function (number){ 
-              return function() {
-                  
-                $(".digits").text(number);
+  <!--Javascript teaching numbers in sign language-->
+  <script>    
+      
+    $( document ).ready(function() {
+      number = 0
+        
+      $( "#l_arr" ).click(function() {
+        if(number != 0){
+          number -= 1; 
+        }
+      });
+        
+      $("#r_arr").click(function(){
+        if(number<10){
+        number += 1;  
+        }
+      });
+        
+      $(".teaching_nums").click(function() {
+        $(".digits").text(number);
                 if(number==0){
                   $(".gestures img").attr("src","../../images/gestures/O.jpg");
                 }
                 else if(number==7 || number==8){
+                  $("#r_arr, #l_arr").addClass("wait_click");
                     
                   $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg")
                   setTimeout(function(){         
-                    $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"b.jpg")         
+                    $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"b.jpg")   
+                    $("#r_arr, #l_arr").removeClass("wait_click");
                   }, 1000);  
                     
                 }
                   
                 else if(number==10){
+                  $("#r_arr, #l_arr").addClass("wait_click");
+                    
                   $(".gestures img").attr("src","../../images/gestures/numbers/10a.jpg")
                   setTimeout(function(){         
                     $(".gestures img").attr("src","../../images/gestures/numbers/10b.jpg")         
                   }, 1000);
                   setTimeout(function(){         
-                    $(".gestures img").attr("src","../../images/gestures/numbers/10c.jpg")         
+                    $(".gestures img").attr("src","../../images/gestures/numbers/10c.jpg")
                   }, 2000); 
                   setTimeout(function(){
                     location.reload();
@@ -70,24 +81,17 @@
                 else{
                   $(".gestures img").attr("src","../../images/gestures/numbers/"+number+".jpg");
                 }
-                  
-                
-                  
-              }
-          })(number),number * 3500)
-        }
-      }
-      setTimeout(start_tutorial, 150);
+      });
+        
     });
-  })
+
   </script>
         
 </head>
     
 <body>   
   <!--table for general layout-->
-  <table style="height:100%; bordercolor=black; width=100% ; background-color=purple;
-        position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+  <table class = "layout_table">
   
   <!--upper row-->
   <tr  style="background-color:#663300; height: 10%; width=100%">
@@ -119,34 +123,28 @@
       <table class="num_navigation" >
       <tr>
         <td class = "current_num_page" style = "width:33.3%;"><button style="width:100%; height:100%;right:2.2px;" onclick="location.reload();">0 - 10</button></td>
-        <td style = "width:33.3%"><button style="width:100%; height:100%;right:2px;" onclick="window.location.href='numbers2.html'">10 - 90</button></td>
+        <td style = "width:33.3%"><button style="width:100%; height:100%;right:2px;" onclick="window.location.href='numbers2.html'">10 - 100</button></td>
         <td style = "width:33.3%" ><button style="width:100%; height:100%;right:2px;">100 - 1000</button></td>
       </tr>
       </table>  
       
-      <!--play button-->
+     <!--buttons for letters control-->
+      
       <div class = "teaching_nums">
-        <figure name="play">
-        <button name="play" id="play"></button>
-        </figure>
+        <center>
+        <img id = "l_arr" src="../../images/left_arrow.JPG" height="50px" width="50px">
+        &nbsp&nbsp&nbsp
+        <img id = "r_arr" src="../../images/right_arrow.JPG" height="50px" width="50px">
+        </center>
+      </div> 
         
-        <!--process of teaching numbers itself
-        <!-- Left hand side = digits -->
-        <div class="digits">
-          
-        </div>
-      
-        <!-- center is equality sign -->
-        <div class="equality">
-          =
-        </div>
-      
-        <!-- gesture -->
-        <div class="gestures">
-          <img src="../../images/blank.JPG" width="130px" height="130px"> 
-        </div>
-          
-      </div>
+        <table class="number_table" >
+      <tr>
+        <td style = "width:33.3%;"><div class="digits">0</div></td>
+        <td style = "width:33.3%;"><div class="equality">=</div></td>
+        <td style = "width:33.3%;"><div class="gestures"><img src="../../images/gestures/O.jpg" width="130px" height="130px"></div></td>
+      </tr>
+      </table>  
       
           
   </td>

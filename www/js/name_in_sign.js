@@ -69,6 +69,6 @@ function show_name(name){
                                 
                                 
             }
-        })(i),i * 2500)
+        })(i),i * 4000)
     }
 }
