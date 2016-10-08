@@ -14,7 +14,7 @@ As far as we are concerned, this language is widely used in two countries - Cypr
 
 <p>
 Ignorance is a major issue and someone should popularise Sign Language in these countries because deaf people lack basic social needs.
-They can't find friends, can't find love, can't even talk to a random person. <b>If we don't go into action these people may be doomed to loneliness!</b>
+They can't find friends, can't find love, can't even talk to a random person. <b>If we don't go into action these people may be doomed to loneliness!</b> It is not just a bunch of people there are actually 2.5 <sup>[2]</sup> million deaf people in Turkey alone that's more than population of some countries. 
 </p>
 
 
@@ -31,4 +31,5 @@ We will start simple and then will make app more and more advanced. My main visi
 <h3>References</h3>
 
 [1] https://en.wikipedia.org/wiki/Turkish_Sign_Language
+[2] http://turkisaretdili.ku.edu.tr/en/tid.aspx
 
