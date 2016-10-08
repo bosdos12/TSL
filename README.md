@@ -40,7 +40,7 @@ Never hesitate to contact our leader - Anar Kazimov(anarkazimov98@gmail.com)
 
 <h3>Final words!</h3>
 <p>
-We are the ones who can make the difference.
+The number of lives we can touch is the most valuable asset.
 </p>
 
 <h3>References</h3>
