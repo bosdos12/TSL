@@ -23,5 +23,8 @@ Well, as cool programmists we need to create a simple and friendly app that peop
 
 </p>
 
+
+<h3>References</h3>
+
 [1] https://en.wikipedia.org/wiki/Turkish_Sign_Language
 
