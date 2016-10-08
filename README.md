@@ -25,7 +25,7 @@ Well, as cool programmists we need to create a simple and friendly app that peop
 </p>
 
 <p>
-We will start simple and then will make app more and more advanced. My main vision is this: <sub>simple tutor app</sub> -> tutor app + sign chat (you send message in text it comes in signs) + no ads or moetisation (completely free/at least for first year :) )
+We will start simple and then will make app more and more advanced. My main vision is this: simple tutor app --> tutor app + sign chat (you send message in text it comes in signs) + no ads or moetisation (completely free/at least for first year :) )
 
 
 <h3>References</h3>
