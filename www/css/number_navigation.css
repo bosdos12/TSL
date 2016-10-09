@@ -12,7 +12,7 @@
 }
 
 .num_navigation button{
-  background-color: #006600;/*009933;*/
+  background-color: #00CC00; /*#006600;*//*009933;*/
   border-radius: 2px;
   text-decoration: none;
   margin: 2px;
@@ -24,7 +24,7 @@
 }
         
 .num_navigation button:active {
-  background-color: #3e8e41;
+  background-color: #003300;
   box-shadow: 0 2px #666;
   transform: translateY(2px);
 }
