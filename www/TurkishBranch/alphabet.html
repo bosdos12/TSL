@@ -3,66 +3,32 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <title>TID ÖĞRETMENİ</title>
-        <!-- some fancy styles-->
-        <style>
-        .nav_btn {
-            background-color: inherit; /* purple */            
-            border: none;
-            outline: none;
-            }
-        </style>
+         <!-- Navigation page + different styles-->
+  <link rel="stylesheet" type="text/css" href="../css/general_contour.css">
+  <link rel="stylesheet" type="text/css" href="../css/menu.css"/>
         
-        
-        <!-- navigation page -->
-        <link rel="stylesheet" type="text/css" href="../css/menu.css"/>
-        <style>
-            
-        .navigation{
-                
-            visibility: hidden;
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            float: left;
-            position: fixed; 
-            top: 0; bottom: 0; left: 0; 
-            }
-       
-        
-        </style>
-        
-        <!-- center of the display -->
-         <style>
-       .letters{
-           width: 100%;
-           height: 100%;
-           top: 20%;
-           left: 15%
-           right: 15%;
-           text-align: center;
-           position: fixed;
-           font-size: 120%;
+  <!-- location of letters and page specific styles -->
+  <style>
+  .letters{
+    width: 100%;
+    height: 100%;
+    top: 20%;  
+    text-align: center;
+    position: fixed;
+    font-size: 120%;
            
-           
-       }
+  }
              
-             td{
-                 text-align: center;
-             }
+  td{
+    text-align: center;
+  }
              
-        /* css for letters */
-        .inactive {color:blue; text-decoration: underline}
-        .selected {color:red;}
-        .wait_click{pointer-events: none;}
-        
-        table {
-            border-collapse: separate;
-            border-spacing: 0;
-             }                     
-
-        </style>        
+  /* css for letters */
+  .inactive {color:blue; text-decoration: underline}
+  .selected {color:red;}
+  .wait_click{pointer-events: none;}
+             
+  </style>               
         
         <!-- Importing JQuery -->
         <script src="../js/jquery-3.1.0.min.js"></script>

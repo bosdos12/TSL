@@ -1,11 +1,12 @@
 .nav_btn {
-    background-color: inherit; /* purple */            
+    background-color: inherit;           
     border: none;
     outline: none;
     text-align: center;
     }
   
 table {
+  
   border-collapse: separate;
   border-spacing: 0;
 }
