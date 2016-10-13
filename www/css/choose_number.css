@@ -1,0 +1,9 @@
+.choose_number{
+  width: 50%;height: 25%;text-align:center;
+  position:fixed;top:40%;left:15%;
+}
+
+.number_block{
+  width: 30px;height:60px;
+  background: black;color:white;
+}
