@@ -21,7 +21,9 @@
     
   <!-- language -->
   <script src = "../../js/change_lang.js"></script>
-    
+  
+  <!--Javascript allowing to choose the number-->
+  <script src = "../../js/choose_number.js"></script>
 
   <!-- javascript allowing to access the language change page-->
   <script>
@@ -30,7 +32,7 @@
   }
   </script>
         
-  <!--//Javascript teaching numbers in sign language-->
+ 
   
         
 </head>
@@ -80,8 +82,8 @@
       
      
      <table class="choose_number">
-      <tr height="33%">
-        <td><font color="green" size="+2">&#x25B2</font></td>
+      <tr height="33%" id="click_down">
+        <td><font color="green" size="+2" class="hun_up">&#x25B2</font></td>
         <td><font color="green" size="+2">&#x25B2</font></td>
         <td><font color="green" size="+2">&#x25B2</font></td>
         <td></td>
@@ -89,14 +91,14 @@
       </tr>
          
       <tr>
-        <td width="20%" class="number_block"><div>0</div></td>
+        <td width="20%" class="number_block"><div class="huns">0</div></td>
         <td width="20%" class="number_block">0</td>
         <td width="20%" class="number_block">0</td>
-        <td width="20%"><center><h2>=</h2></center></td>
-        <td width="20%"></td>
+        <td width="20%"><center><h1>&nbsp&nbsp=&nbsp&nbsp</h1></center></td>
+        <td width="20%"><img src="../../images/gestures/O.jpg" height="130px" width="130px" rowspan="3"></td>
       </tr>
          
-      <tr>
+      <tr id="click_up" class="num_down">
         <td><font color="green" size="+2">&#x25BC</font></td>
         <td><font color="green" size="+2">&#x25BC</font></td>
         <td><font color="green" size="+2">&#x25BC</font></td>
