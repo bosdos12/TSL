@@ -1,9 +1,13 @@
 .choose_number{
-  width: 50%;height: 25%;text-align:center;
-  position:fixed;top:40%;left:22%;
+
+margin-top:20%;
+    width:90%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .number_block{
   width: 30px;height:60px;
   background: black;color:white;
+  text-align:center;
 }
