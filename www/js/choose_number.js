@@ -5,9 +5,35 @@ $(document).ready(function(){
     if(typeof hundreds == 'undefined'){hundreds=0;}
     if(typeof tens == 'undefined'){tens=0;}
     if(typeof ones == 'undefined'){ones=0;}
-    alert(hundreds + "" + tens + "" + ones);    
+    //alert(hundreds + "" + tens + "" + ones);  
+     
+    if(tens==0 && hundreds==0){
+      //dealing with ones
+      if(ones==0){
+        $("#gesture").attr("src","../../images/gestures/o.jpg");
+      }
+      else if(ones==7 || ones==8){
+        $("#learn_btn").addClass("wait_click");
+        $("#gesture").attr("src","../../images/gestures/numbers/"+ones+"a.jpg")
+        setTimeout(function(){         
+          $("#gesture").attr("src","../../images/gestures/numbers/"+number+"b.jpg")   
+          $("#learn_btn").removeClass("wait_click");
+        }, 1000);             
+       }
+                  
+       else{
+         $("#gesture").attr("src","../../images/gestures/numbers/"+ones+".jpg");
+       }
     
+    }
+      
+      
   });
+    
+
+    
+    
+    
 
   //read value of hundreds and increase its value by one
   $(".huns_up").click(function(){
