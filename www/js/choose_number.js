@@ -5,8 +5,25 @@ $(document).ready(function(){
     if(typeof hundreds == 'undefined'){hundreds=0;}
     if(typeof tens == 'undefined'){tens=0;}
     if(typeof ones == 'undefined'){ones=0;}
-    //alert(hundreds + "" + tens + "" + ones);  
-     
+    
+    if(hundreds>0){
+      alert(hundreds);
+      alert(tens);
+      alert(ones);
+    }
+    else{
+      if(tens>0){
+        alert(tens);
+        alert(ones);        
+      }
+      else{
+        if(ones>0){
+          alert(ones);
+        }
+      }
+    }
+      
+     /*
     if(tens==0 && hundreds==0){
       //dealing with ones
       if(ones==0){
@@ -25,7 +42,7 @@ $(document).ready(function(){
          $("#gesture").attr("src","../../images/gestures/numbers/"+ones+".jpg");
        }
     
-    }
+    } */
       
       
   });
