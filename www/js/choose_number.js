@@ -17,9 +17,7 @@ $(document).ready(function(){
         alert(ones);        
       }
       else{
-        if(ones>0){
-          alert(ones);
-        }
+        alert(ones);
       }
     }
       
