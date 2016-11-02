@@ -59,7 +59,7 @@
         if(number<20){
           number += 1;  
         }
-        else if(number >= 20){
+        else if(number >= 20 && number<100){
           number += 10;
         }
       });
@@ -157,16 +157,12 @@
           
           else if(number == 100){
             $("#r_arr, #l_arr").addClass("wait_click");
-            $(".gestures img").attr("src","../../images/gestures/numbers/100a.jpg") ;
+            $(".gestures img").attr("src","../../images/gestures/numbers/100a.jpeg") ;
             
             setTimeout(function(){         
-            $(".gestures img").attr("src","../../images/gestures/numbers/100b.jpg");
-          }, 2500); 
-              
-             setTimeout(function(){         
-            $(".gestures img").attr("src","../../images/gestures/numbers/100c.jpg") 
+            $(".gestures img").attr("src","../../images/gestures/numbers/100b.jpeg");
             $("#r_arr, #l_arr").removeClass("wait_click");
-          }, 4000);
+          }, 2500); 
               
           }
           
@@ -210,7 +206,7 @@
             
   <!--bottom row-->
   <tr style="height: 75%; width=100%">
-  <td valign="top" colspan = 3 > 
+  <td valign="top" colspan = 3 class="bottom"> 
     <!-- navigation in numbers sectionr --> 
       <table class = "nums" style="width:100%">
           <tr>

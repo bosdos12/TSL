@@ -7,9 +7,17 @@ $(document).ready(function(){
     if(typeof ones == 'undefined'){ones=0;}
     
     if(hundreds>0){
-      alert(hundreds);
-      alert(tens);
-      alert(ones);
+        
+      if(hundreds==1){
+        $("#learn_btn").addClass("wait_click");
+        $("#gesture").attr("src","../../images/gestures/numbers/100a.jpeg") ;
+        setTimeout(function(){         
+          $("#gesture").attr("src","../../images/gestures/numbers/100b.jpeg");
+          $("#learn_btn").removeClass("wait_click");
+        }, 2500); 
+              
+       }
+        
     }
     else{
       if(tens>0){
