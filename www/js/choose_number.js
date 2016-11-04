@@ -7,16 +7,24 @@ $(document).ready(function(){
     if(typeof ones == 'undefined'){ones=0;}
     
     if(hundreds>0){
-        
+       $(".number_block .huns").css("color", "red");
       if(hundreds==1){
         $("#learn_btn").addClass("wait_click");
-        $("#gesture").attr("src","../../images/gestures/numbers/100a.jpeg") ;
+        $("#gesture").attr("src","../../images/gestures/numbers/100a.jpg");
         setTimeout(function(){         
-          $("#gesture").attr("src","../../images/gestures/numbers/100b.jpeg");
+          $("#gesture").attr("src","../../images/gestures/numbers/100b.jpg");
           $("#learn_btn").removeClass("wait_click");
-        }, 2500); 
-              
+          $(".number_block .huns").css("color", "white");
+        }, 2500);       
        }
+        
+       else if(hundreds>=2 && hundreds<=5){
+         $("#gesture").attr("src","../../images/gestures/numbers/" + hundreds + "00.jpg");
+          setTimeout(function(){         
+            $(".number_block .huns").css("color", "white");
+          }, 2500);  
+       }
+        
         
     }
     else{
