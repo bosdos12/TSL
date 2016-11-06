@@ -18,7 +18,7 @@ $(document).ready(function(){
         }, 2500);       
        }
         
-       else if(hundreds>=2 && hundreds<=5){
+       else if(hundreds>=2 && hundreds<=7){
          $("#gesture").attr("src","../../images/gestures/numbers/" + hundreds + "00.jpg");
           setTimeout(function(){         
             $(".number_block .huns").css("color", "white");
