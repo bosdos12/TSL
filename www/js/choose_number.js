@@ -6,8 +6,12 @@ $(document).ready(function(){
     if(typeof tens == 'undefined'){tens=0;}
     if(typeof ones == 'undefined'){ones=0;}
     
-    if(hundreds>0){
+      
+      
+      
+    if(hundreds>0){        
        $(".number_block .huns").css("color", "red");
+        
       if(hundreds==1){
         $("#learn_btn").addClass("wait_click");
         $("#gesture").attr("src","../../images/gestures/numbers/100a.jpg");
@@ -18,45 +22,46 @@ $(document).ready(function(){
         }, 2500);       
        }
         
-       else if(hundreds>=2 && hundreds<=7){
+       else if(hundreds>=2 && hundreds<=9){
          $("#gesture").attr("src","../../images/gestures/numbers/" + hundreds + "00.jpg");
           setTimeout(function(){         
-            $(".number_block .huns").css("color", "white");
+            $(".number_block .huns").css("color", "white"); 
           }, 2500);  
        }
         
-        
-    }
-    else{
-      if(tens>0){
-        alert(tens);
-        alert(ones);        
-      }
-      else{
-        alert(ones);
-      }
+       
     }
       
-     /*
-    if(tens==0 && hundreds==0){
-      //dealing with ones
-      if(ones==0){
-        $("#gesture").attr("src","../../images/gestures/o.jpg");
-      }
-      else if(ones==7 || ones==8){
-        $("#learn_btn").addClass("wait_click");
-        $("#gesture").attr("src","../../images/gestures/numbers/"+ones+"a.jpg")
-        setTimeout(function(){         
-          $("#gesture").attr("src","../../images/gestures/numbers/"+number+"b.jpg")   
-          $("#learn_btn").removeClass("wait_click");
-        }, 1000);             
-       }
-                  
-       else{
-         $("#gesture").attr("src","../../images/gestures/numbers/"+ones+".jpg");
-       }
+    else{
     
-    } */
+    }
+      
+    setTimeout(function(){  
+    
+        $(".number_block .tens").css("color", "red");
+        if(tens>=2 && tens<=5){
+            
+          $("#learn_btn").addClass("wait_click");
+          $("#gesture").attr("src","../../images/gestures/numbers/"+tens+"0a.jpg")
+          setTimeout(function(){         
+            $("#gesture").attr("src","../../images/gestures/numbers/"+tens+"0b.jpg")         
+          }, 2000);
+          
+           setTimeout(function(){         
+            $("#gesture").attr("src","../../images/gestures/numbers/"+tens+"0a.jpg") 
+            $("#learn_btn").removeClass("wait_click");
+            $(".number_block .tens").css("color", "white");
+          }, 3000);  
+                  
+        }
+         
+    }, 3500);
+    
+      
+    setTimeout(function(){  
+      
+    }, 7500);
+      
       
       
   });
