@@ -28,7 +28,15 @@
 
 #weather{
     margin-top:70px; 
-   position:fixed;
-  margin-left:10%;
+    position:fixed;
+    margin-left:10%;
   
+}
+
+.title{
+    position: absolute;
+    top: 23%;
+    left: 41%;
+    font-size: 72px;
+    font-family: Papyrus;
 }
