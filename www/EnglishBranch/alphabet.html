@@ -57,19 +57,15 @@
             
         //Function playing sound
         function playAudio(src) {
-
     // HTML5 Audio
     if (typeof Audio != "undefined") { 
         new Audio(src).play() ;
-
     // Phonegap media
     } else if (typeof device != "undefined") {
-
         // Android needs the search path explicitly specified
         if (device.platform == 'Android') {
             src = '/android_asset/www/' + src;
         }
-
         var mediaRes = new Media(src,
             function onSuccess() {
                 // release the media resource once finished playing
@@ -79,7 +75,6 @@
                 console.log("error playing sound: " + JSON.stringify(e));
             });
         mediaRes.play();
-
     } else {
         console.log("no sound API to play: " + src);
     }
