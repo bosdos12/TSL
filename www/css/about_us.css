@@ -25,5 +25,31 @@
   border-radius:50%;
  }
 
+#name_1{
+  position: absolute;
+  margin-left:18%;
+  margin-top:-8%;
+  font-size: 21px;
+}
 
+#name_2{
+  position: absolute;
+  margin-left:50%;
+  margin-top:-8%;
+  font-size: 21px;
+}
 
+#name_3{
+  position: absolute;
+  margin-left:82%;
+  margin-top:-8%;
+  font-size: 21px;
+}
+
+#main_text{
+  width:100%	
+  position: absolute;
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+}
