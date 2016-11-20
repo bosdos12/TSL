@@ -14,10 +14,34 @@ $(document).ready(function(){
     });
     first_gesture = 1 - first_gesture; 
 }
+setInterval(two_gstr_signs, 1500);
 
-setInterval(two_gstr_signs, 2000);
-    
  
+ function three_gstr_signs(){
+   //how are you
+   $("#h_r_u").attr("src", "../../images/gestures/greeting/h_r_u_1.jpg");
+   setTimeout(function() { $("#h_r_u").attr("src", "../../images/gestures/greeting/h_r_u_2.jpg"); }, 1500)
+   setTimeout(function() { $("#h_r_u").attr("src", "../../images/gestures/greeting/point_to.jpg"); }, 3000)
+   
+   //I am fine
+   $("#fine").attr("src", "../../images/gestures/greeting/fine_1.jpg");
+   setTimeout(function() { $("#fine").attr("src", "../../images/gestures/greeting/fine_2.jpg"); }, 1500)
+   setTimeout(function() { $("#fine").attr("src", "../../images/gestures/greeting/self_point.jpg"); }, 3000)
+   
+   //What is your name
+   $("#your_name").attr("src", "../../images/gestures/greeting/name_1.jpg");
+   setTimeout(function() { $("#your_name").attr("src", "../../images/gestures/greeting/name_2.jpg"); }, 1500)
+   setTimeout(function() { $("#your_name").attr("src", "../../images/gestures/greeting/point_to.jpg"); }, 3000)
+   
+   //My name is....
+   $("#my_name").attr("src", "../../images/gestures/greeting/name_1.jpg");
+   setTimeout(function() { $("#my_name").attr("src", "../../images/gestures/greeting/name_2.jpg"); }, 1500)
+   setTimeout(function() { $("#my_name").attr("src", "../../images/gestures/greeting/self_point.jpg"); }, 3000)
+   
+   
+   
+ }
+ setInterval(three_gstr_signs, 4000);
     
 });
 
