@@ -3,6 +3,10 @@
     background-repeat: no-repeat;  background-size: 100% 100%;
 }
 
+.board img{
+  border-color: black;
+}
+
 .board img:hover{
   border-color: red;  
 }
