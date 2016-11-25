@@ -14,3 +14,8 @@
   -moz-border-radius: 15px;
   border-radius: 15px;
 }
+
+.selected{
+  border-style: solid;
+  border-color:#00CCCC;
+}

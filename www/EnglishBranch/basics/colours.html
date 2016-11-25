@@ -15,6 +15,12 @@
    <!-- language -->
    <script src = "../../js/change_lang.js"></script>
    
+   <!-- Jquery-->
+   <script src="../../js/jquery-3.1.0.min.js"></script>
+    
+   <!-- Colours -->
+   <script src="../../js/colours.js"></script>
+    
    <!-- javascript allowing to access the language change page-->
    <script>
    function langChange(){
@@ -63,7 +69,7 @@
     <table id="colour_table">
         
       <tr>
-      <td><center><div class="circle" style="background: red;"></div></center></td>
+      <td><center><div class="circle" id="default" style="background: red;"></div></center></td>
       <td><center><div class="circle" style="background: green;"></div></center></td>
       <td><center><div class="circle" style="background: blue;"></div></center></td>
       <td><center><div class="circle" style="background: brown;"></div></center></td>
@@ -71,7 +77,7 @@
       </tr>
         
       <tr>
-       <td><center><div class="circle" style="background: white;"></div></center></td>
+      <td><center><div class="circle" style="background: white;"></div></center></td>
       <td><center><div class="circle" style="background: grey;"></div></center></td>
       <td><center><div class="circle" style="background: orange;"></div></center></td>
       <td><center><div class="circle" style="background: yellow;"></div></center></td>
@@ -79,6 +85,9 @@
       </tr>
         
     </table>
+      
+    <br><br><br>
+    <center><img id = "colour_gesture" src="../../images/gestures/colours/red_1.jpg" width="150" height="150"></center>
       
   </td>
   </tr>          
