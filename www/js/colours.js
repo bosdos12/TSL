@@ -8,9 +8,13 @@ $(document).ready(function(){
     //Delete unnecessary background intervals
     try{
       window.clearInterval(refreshIntervalId);
+      window.clearInterval(refreshSecondIntervalId);
     } catch(err){}
     
     //this is an interval that checks for chosem circles and update gestures if necessary
+      
+    //this is interval for two gesture signs
+    if (colour != "rgb(0, 0, 255)" && colour != "rgb(255, 255, 0)"){
     window.refreshIntervalId = setInterval(function(){
         
       //Red colour  
@@ -96,8 +100,73 @@ $(document).ready(function(){
           ``        
       }
         
+     //Pink colour  
+      else if (colour == "rgb(255, 192, 203)"){
+          
+        current_image = $("#colour_gesture").attr("src");  
+        if(current_image.indexOf("pink_1") != -1){ 
+          current_image = $("#colour_gesture").attr("src", "../../images/gestures/colours/pink_2.jpg");
+        }
+          
+        else{
+          current_image = $("#colour_gesture").attr("src", "../../images/gestures/colours/pink_1.jpg"); 
+        }
+                 
+      } 
+        
+      //Orange colour  
+      else if (colour == "rgb(255, 165, 0)"){
+          
+        current_image = $("#colour_gesture").attr("src");  
+        if(current_image.indexOf("orange_1") != -1){ 
+          current_image = $("#colour_gesture").attr("src", "../../images/gestures/colours/orange_2.jpg");
+        }
+          
+        else{
+          current_image = $("#colour_gesture").attr("src", "../../images/gestures/colours/orange_1.jpg"); 
+        }
+                 
+      }
     }, 2000);
+    }
+    
+    //Interval for three gesture signs
+    else if(colour == "rgb(0, 0, 255)" || colour == "rgb(255, 255, 0)"){
+     window.refreshSecondIntervalId = setInterval(function(){
+       
+      //Blue colour  
+      if(colour == "rgb(0, 0, 255)"){
+        
+        current_image = $("#colour_gesture").attr("src");        
+        if(current_image.indexOf("blue_1") != -1){
+          current_image = $("#colour_gesture").attr("src", "../../images/gestures/colours/blue_2.jpg"); 
+        }
+        else if(current_image.indexOf("blue_2") != -1){
+          current_image = $("#colour_gesture").attr("src", "../../images/gestures/colours/blue_3.jpg"); 
+        }
+        else{
+          current_image = $("#colour_gesture").attr("src", "../../images/gestures/colours/blue_1.jpg");
+        }   
+      }
+         
+     else if(colour == "rgb(255, 255, 0)"){
+       current_image = $("#colour_gesture").attr("src");        
+        if(current_image.indexOf("yellow_1") != -1){
+          current_image = $("#colour_gesture").attr("src", "../../images/gestures/colours/yellow_2.jpg"); 
+        }
+        else if(current_image.indexOf("yellow_2") != -1){
+          current_image = $("#colour_gesture").attr("src", "../../images/gestures/colours/yellow_3.jpg"); 
+        }
+        else{
+          current_image = $("#colour_gesture").attr("src", "../../images/gestures/colours/yellow_1.jpg");
+        }  
+     }
+         
+     }, 2500);    
+         
       
+        
+    }
       
       
   }
