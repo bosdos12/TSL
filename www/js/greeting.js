@@ -23,7 +23,7 @@ setInterval(two_gstr_signs, 1500);
     $(".3_order").html("1");
     setTimeout(function() {  $(".3_order").html("2"); }, 500);
     setTimeout(function() {  $(".3_order").html("3"); }, 2000);
-    setTimeout(function() {  $(".3_order").html("1"); }, 3500);
+    setTimeout(function() {  $(".3_order").html("1"); }, 3100);
      
    //how are you
    $("#h_r_u").attr("src", "../../images/gestures/greeting/h_r_u_1.jpg");
