@@ -7,13 +7,21 @@
   <!-- Navigation page + different styles-->
   <link rel="stylesheet" type="text/css" href="../../css/general_contour.css">
   <link rel="stylesheet" type="text/css" href="../../css/menu.css"/>   
-   
+  <link rel="stylesheet" type="text/css" href="../../css/weather.css">
+  
    <!--Controlling navigation menu--> 
    <script src="../../js/control_menu.js"></script>
-   <script src="../../js/swipe.js"></script>
+   <script src="../../js/swipe.js"></script>    
     
    <!-- language -->
    <script src = "../../js/change_lang.js"></script>
+    
+   <!-- Jquery-->
+   <script src="../../js/jquery-3.1.0.min.js"></script>
+    
+   <!--Javascript for showing weather gesture-->
+   <script src = "../../js/weather.js"></script>
+  
    
    <!-- javascript allowing to access the language change page-->
    <script>
@@ -49,7 +57,7 @@
       
   <td>
     <center>
-    <img onclick="change_lang()" src="../../images/TurkishFlag.PNG" height="38px">
+    <img onclick="change_lang()" src="../../images/EnglishFlag.PNG" height="38px">
     </center>
   </td>      
       
@@ -59,7 +67,24 @@
   <!--bottom row-->
   <tr  style="height: 75%; width=100%">
   <td colspan = 3 class="bottom">
+     <table id="image_table">
       
+      <tr>
+      <td><center><img src="../../images/basics/weather/hot.jpg" height="60" width="80" id="default" class="clip"></center></td>
+      <td><center><img src="../../images/basics/weather/cold.jpg" height="60" width="80" class="clip"></center></td>
+      <td><center><img src="../../images/basics/weather/rainy.jpg" height="60" width="80" class="clip"></center></td>
+      </tr>
+        
+      <tr>
+      <td><center><img src="../../images/basics/weather/snowy.jpg" height="60" width="80" class="clip"></center></td>
+      <td><center><img src="../../images/basics/weather/sky.jpg" height="60" width="80" class="clip"></center></td>
+      <td><center><div  class="circle clip" style="background: red;" ><br>I love</div></center></td>
+      </tr>
+        
+    </table>
+      
+    <br><br><br><br><br><br><br><br><br>
+    <center><img id = "weather_gesture" src="../../images/gestures/weather/hot_1.jpg" width="180" height="180"></center>
   </td>
   </tr>          
             
