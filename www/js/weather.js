@@ -14,7 +14,7 @@ $(document).ready(function(){
     window.refreshIntervalId = setInterval(function(){
       current_image = $("#weather_gesture").attr("src");
       
-      if(weather == undefined){ //I love
+      if(weather.indexOf("love") != -1){ //I love
         if(current_image.indexOf("love_1") != -1){
           current_image = $("#weather_gesture").attr("src", "../../images/gestures/weather/love_2.jpg"); 
         }
@@ -26,7 +26,7 @@ $(document).ready(function(){
         }
        }
         
-      if(weather.indexOf("hot") != -1){
+      else if(weather.indexOf("hot") != -1){
         if(current_image.indexOf("hot_1") != -1){
           current_image = $("#weather_gesture").attr("src", "../../images/gestures/weather/hot_2.jpg"); 
         }
