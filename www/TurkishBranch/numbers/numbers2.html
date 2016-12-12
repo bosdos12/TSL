@@ -20,6 +20,9 @@
   
   <!-- language -->
   <script src = "../../js/change_lang.js"></script>
+    
+  <!-- animation of the numbers -->
+  <script src="../../js/numbers_2.js"></script>
 
 
   <!-- javascript allowing to access the language change page-->
@@ -31,20 +34,7 @@
         
   <!--Javascript teaching numbers in sign language-->
   <script>
-    $( document ).ready(function() {
-      
-      //number 11
-      $("#r_arr, #l_arr").addClass("wait_click");
-      $(".gestures img").attr("src","../../images/gestures/numbers/11a.jpg")
-      setTimeout(function(){         
-        $(".gestures img").attr("src","../../images/gestures/numbers/11b.jpg")         
-      }, 2000);
-      setTimeout(function(){         
-        $(".gestures img").attr("src","../../images/gestures/numbers/11a.jpg") 
-        $("#r_arr, #l_arr").removeClass("wait_click");
-      }, 3000);  
-        
-    
+    $( document ).ready(function() {  
       number = 11
         
       $( "#l_arr" ).click(function() {
@@ -66,110 +56,7 @@
       });
         
       $(".teaching_nums").click(function() {
-        $(".digits").text(number);
-          
-        if(number<=15){
-          $("#r_arr, #l_arr").addClass("wait_click");
-          $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg")
-          setTimeout(function(){         
-            $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"b.jpg")         
-          }, 2000);
-          setTimeout(function(){         
-            $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg") 
-            $("#r_arr, #l_arr").removeClass("wait_click");
-          }, 3000);
-                }
-          
-          else if(number==16 || number==19){
-          $("#r_arr, #l_arr").addClass("wait_click");
-          $(".gestures img").attr("src","../../images/gestures/numbers/10a.jpg")
-           setTimeout(function(){         
-            $(".gestures img").attr("src","../../images/gestures/numbers/10b.jpg")         
-          }, 2000);
-          setTimeout(function(){         
-            $(".gestures img").attr("src","../../images/gestures/numbers/10c.jpg")         
-          }, 3000);
-          setTimeout(function(){         
-            $(".gestures img").attr("src","../../images/gestures/numbers/"+(number-10)+".jpg")
-            $("#r_arr, #l_arr").removeClass("wait_click");
-          }, 4000);
-         }
-            
-        else if(number==17 || number==18){
-          $("#r_arr, #l_arr").addClass("wait_click");
-          $(".gestures img").attr("src","../../images/gestures/numbers/10a.jpg")
-           setTimeout(function(){         
-            $(".gestures img").attr("src","../../images/gestures/numbers/10b.jpg")         
-          }, 2000);
-          setTimeout(function(){         
-            $(".gestures img").attr("src","../../images/gestures/numbers/10c.jpg")         
-          }, 3000);
-          setTimeout(function(){         
-            $(".gestures img").attr("src","../../images/gestures/numbers/" + (number-10) + "a.jpg")
-          }, 4000); 
-         
-          setTimeout(function(){         
-            $(".gestures img").attr("src","../../images/gestures/numbers/" + (number-10) + "b.jpg")
-            $("#r_arr, #l_arr").removeClass("wait_click");
-          }, 5000);      
-        }
-          
-          else if(number>=20 && number<=50 ){
-          $("#r_arr, #l_arr").addClass("wait_click");
-          $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg")
-          setTimeout(function(){         
-            $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"b.jpg")         
-          }, 2000);
-          setTimeout(function(){         
-            $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg")         
-          }, 3000);
-          setTimeout(function(){         
-            $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"b.jpg")
-          }, 4000);
-           setTimeout(function(){         
-            $(".gestures img").attr("src","../../images/gestures/numbers/"+number+"a.jpg") 
-            $("#r_arr, #l_arr").removeClass("wait_click");
-          }, 5000);  
-        }
-          
-        else if(number == 60 || number == 90){
-           $("#r_arr, #l_arr").addClass("wait_click");
-          $(".gestures img").attr("src","../../images/gestures/numbers/"+(number/10)+".jpg")
-          setTimeout(function(){         
-            $(".gestures img").attr("src","../../images/gestures/O.jpg") 
-            $("#r_arr, #l_arr").removeClass("wait_click");
-          }, 2000);
-        }
-          
-          else if(number == 70 || number == 80){
-              $("#r_arr, #l_arr").addClass("wait_click");
-          $(".gestures img").attr("src","../../images/gestures/numbers/"+(number/10)+"a.jpg") ;
-              
-          setTimeout(function(){         
-            $(".gestures img").attr("src","../../images/gestures/numbers/"+(number/10)+"b.jpg");
-          }, 2500);  
-              
-          setTimeout(function(){         
-            $(".gestures img").attr("src","../../images/gestures/O.jpg") 
-            $("#r_arr, #l_arr").removeClass("wait_click");
-          }, 4000);
-          }
-          
-          
-          else if(number == 100){
-            $("#r_arr, #l_arr").addClass("wait_click");
-            $(".gestures img").attr("src","../../images/gestures/numbers/100a.jpeg") ;
-            
-            setTimeout(function(){         
-            $(".gestures img").attr("src","../../images/gestures/numbers/100b.jpeg");
-            $("#r_arr, #l_arr").removeClass("wait_click");
-          }, 2500);
-              
-          }
-          
-          
-          
-          
+        $(".digits").text(number);    
           
       });
         
