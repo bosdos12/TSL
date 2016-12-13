@@ -53,8 +53,7 @@
     
     <gap:plugin name="cordova-plugin-splashscreen" source="npm" version="4.0.0" />
     <gap:plugin name="cordova-plugin-media" source="npm" version="2.4.0" />
-   
-    
+    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.5.0" />
 
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
@@ -110,6 +109,7 @@
     -->
 
     <access origin="*"/>
+    <access origin="*" browserOnly="true">/
     <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
     <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
     <allow-intent href="http://*/*" />
