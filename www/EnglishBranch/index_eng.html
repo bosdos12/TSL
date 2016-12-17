@@ -5,10 +5,9 @@
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
   <title>TSL Tutor</title>
     
-  <!-- Navigation menu + different styles-->
-  <link rel="stylesheet" type="text/css" href="../css/menu.css"/>
-  <link rel="stylesheet" type="text/css" href="../css/eng_tur_main_pages.css">
-  <link rel="stylesheet" type="text/css" href="../css/general_contour.css">
+  <link rel="stylesheet" type="text/css" href="../css/menu.css"/><!-- Navigation menu-->
+  <link rel="stylesheet" type="text/css" href="../css/eng_tur_main_pages.css"><!--special styles for main pages-->
+  <link rel="stylesheet" type="text/css" href="../css/general_contour.css"> 
   
   <!--Jquery-->
   <script src="../js/jquery-3.1.0.min.js"></script>
@@ -16,22 +15,21 @@
   <!-- Javascript checking if name is known or not-->
   <script src = "../js/user_name.js"></script>
     
-  <!--javascript which shows the name using sign language -->   
+  <!--javascript which shows the name using sign language if user enters the app first time -->   
   <script src = "../js/name_in_sign.js"></script>         
     
-  <!--Controlling navigation menu--> 
+  <!-- Javascript controlling navigation menu--> 
   <script src="../js/control_menu.js"></script>
     
-  <!-- language -->
+  <!-- language  preference button in the right top corner-->
   <script src = "../js/change_lang.js"></script>
         
-    <!-- javascript that allows to access index.html in order to change language preferences-->
+  <!-- javascript that allows to access index.html in order to change language preferences-->
     <script>
     function langChange(){
       localStorage.setItem('lang', 0);
     }
-    </script>
-        
+    </script>   
 </head>
     
 <body>   
@@ -68,35 +66,35 @@
   </tr>     
       
   <!--bottom row-->
-      
   <tr  style="height: 75%; width=100%">
   <td colspan = 3 class="bottom" >
             
-    <!-- asking name -->
-    <div class = "ask_name"> 
-      <center>
-      <div id = "text_in_shape">
-        <font color = "#ffffff" size="+2">Your name?</font>
-      </div>  
-      <input type="text" id="name" size = "18" style = " font-size:17px; margin-left:4px; " onchange = "show_name(this.value)"/>
-      <br><br>
-      <img id = "sign" src = "../images/blank.JPG" height = "200px" width="200px">
-      </center>
-    </div>
-                
-    <div class = "rubric_choice">
-      <b><p id = "greeting" style="font-size:120%;" onclick = "new_name()"></p></b>
-      <div id = "buttons">
-        <a href="alphabet.html" class="btn green"><img src="../images/main_pages/abc.png" height="30" width="30" style=" background-position: -96px -112px;
+  <!-- asking name -->
+  <div class = "ask_name"> 
+    <center>
+    <div id = "text_in_shape">
+      <font color = "#ffffff" size="+2">Your name?</font>
+    </div>  
+    <input type="text" id="name" size = "18" style = "font-size:17px; margin-left:4px; " onchange = "show_name(this.value)"/>
+    <br><br>
+    <img id = "sign" src = "../images/blank.JPG" height = "200px" width="200px">
+    </center>
+  </div>
+   
+  <!--here the user chooses what exactly he/she wants to study-->
+  <div class = "rubric_choice">
+    <b><p id = "greeting" style="font-size:120%;" onclick = "new_name()"></p></b>
+    <div id = "buttons">
+      <a href="alphabet.html" class="btn green"><img src="../images/main_pages/abc.png" height="30" width="30" style=" background-position: -96px -112px;
     float: left;"><font style="margin-right:30px;">Alphabet</font></a>
-        <br>
-        <a href="basics/basics.html" class="btn green"><img src="../images/main_pages/basics.png" height="30" width="40" style=" background-position: -96px -112px;
+      <br>
+      <a href="basics/basics.html" class="btn green"><img src="../images/main_pages/basics.png" height="30" width="40" style=" background-position: -96px -112px;
             float: left;"><font style="margin-right:30px;">Basics</font></a>
-        <br>
-        <a href="numbers/numbers.html" class="btn green"><img src="../images/main_pages/numbers.png" height="30" width="30" style=" background-position: -96px -112px;
+      <br>
+      <a href="numbers/numbers.html" class="btn green"><img src="../images/main_pages/numbers.png" height="30" width="30" style=" background-position: -96px -112px;
             float: left;"><font style="margin-right:30px;">Numbers</font></a>
-      </div>
     </div>
+  </div>
             
   </td>
   </tr>          

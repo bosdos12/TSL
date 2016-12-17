@@ -19,12 +19,13 @@
 }
         
 /*Phase know name*/
-#greeting{
+#greeting{        /*this text greets the user*/
   color:blue; 
   text-decoration: underline;
   margin-bottom: -7px;
 }
-                         
+ 
+/*green buttons directing the user to different sections of the app*/
 .rubric_choice{
   width: 100%;
   height: 100%;
