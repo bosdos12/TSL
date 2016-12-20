@@ -10,3 +10,7 @@ else{
   location.href = link.replace( "tur", "eng");
     }
 }
+
+function langChange(){
+  localStorage.setItem('lang', 0);
+}

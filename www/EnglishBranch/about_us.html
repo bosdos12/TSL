@@ -4,48 +4,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         
-  <!-- Navigation page + different styles-->
-  <link rel="stylesheet" type="text/css" href="../css/general_contour.css">
-  <link rel="stylesheet" type="text/css" href="../css/menu.css"/>
-  <link rel="stylesheet" type="text/css" href="../css/about_us.css">    
-        
-  <!-- center of the display -->
-  <style>
-  .text{
-    width: 100%;
-    height: 100%;
-    top: 35%;
-    left: 15%
-    right: 15%;
-    text-align: center;
-    position: fixed;
-    font-size: 150%;
-    }
-        
-   </style>        
-   
-   <!--Controlling navigation menu--> 
-   <script src="../js/control_menu.js"></script>
-   <script src="../js/swipe.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/general_contour.css"><!--Geneal layout of the page-->
+  <link rel="stylesheet" type="text/css" href="../css/menu.css"/><!--navigation menu-->
+  <link rel="stylesheet" type="text/css" href="../css/about_us.css"> 
+
+  <!--Controlling navigation menu--> 
+  <script src="../js/control_menu.js"></script>
+  <script src="../js/swipe.js"></script>
     
-   <!-- language -->
+   <!--language preferences-->
    <script src = "../js/change_lang.js"></script>
-   
-   <!-- javascript allowing to access the language change page-->
-   <script>
-   function langChange(){
-     localStorage.setItem('lang', 0);
-   }
-   </script>
-        
 </head>
     
 <body>  
-             
- <table class = "layout_table" cellspacing="0" cellpadding="0">
+    
+  <table class = "layout_table" cellspacing="0" cellpadding="0">
   
-  <!--upper row-->
+  <!--upper row containing a headline and a dashed button-->
   <tr  style="background-color:#00CC00; height: 8%; width=100%">
+      
   <!-- dashed button -->
   <td> 
     <center>
@@ -58,7 +35,7 @@
   <!--headline-->       
   <td width=100%>
     <center>                
-    <font style ="color: rgba(0,0,0,0.6); text-shadow: 2px 2px 3px rgba(255,255,255,0.1);" size="+3" face="times"><b>TSL</b></font>    
+    <font style ="color: rgba(0,0,0,0.6); text-shadow: 2px 2px 3px rgba(255,255,255,0.1);" size="+3" face="times"><b>TSL</b></font>  
     </center>
   </td>
       
@@ -67,12 +44,11 @@
     <img onclick="change_lang()" src="../images/TurkishFlag.PNG" height="38px">
     </center>
   </td>      
-      
-      
+        
   </tr>
       
-  <!--bottom row-->
-  <tr  style="height: 75%; width=100%">
+  <!--bottom row with photos and information about the team-->
+  <tr style="height:75%; width=100%">
   <td colspan = 3 class="bottom"> 
   <div id="container">
     <img src="../images/about_us/alp.jpg" id="image_1">
@@ -81,8 +57,9 @@
   </div>
   <br>
       
-      <div id="main_text">This app is created by the ESK students in order to make it easy to learn Turkish Sign Language. The project was leaded by an IB student Anar Kazimov and his team consisting of the following members: Daniel Todd, Alp Orgun, Mohammed Ben Musa, Kiymet Sevket, Berke Özoğul, Kerem Dumanoğlu and Tasmin Angelina Houssein. To find out more about our app and us please follow us on Facebook: <b><a href = "http://www.facebook.com/turkceisaretdili">http://www.facebook.com/turkceisaretdili</a></b>
-      </div>
+  <div id="main_text">This app is created by the ESK students in order to make it easy to learn Turkish Sign Language. The project was leaded by an IB student Anar Kazimov and his team consisting of the following members: Daniel Todd, Alp Orgun, Mohammed Ben Musa, Kiymet Sevket, Berke Özoğul, Kerem Dumanoğlu and Tasmin Angelina Houssein. To find out more about our app and us please follow us on Facebook: <b><a href = "http://www.facebook.com/turkceisaretdili">http://www.facebook.com/turkceisaretdili</a></b>
+  </div>
+      
   </td>
   </tr>          
             
