@@ -1,6 +1,6 @@
 # TSL Tutor App
 
-Hi there. We are Software Gates and we are here for a reason!<br>
+Hi there!<br>
 Have you ever heard about Turkish Sign Language?<br>
 <b>Well, better late than never!</b><br>
 
@@ -14,7 +14,7 @@ As far as we are concerned, this language is widely used in two countries - Cypr
 
 <p>
 Ignorance is a major issue and someone should popularise Sign Language in these countries because deaf people lack basic social needs.
-They can't find friends, can't find love, can't even talk to a random person. <b>If we don't go into action these people may be doomed to loneliness!</b> It is not just a bunch of people there are actually 2.5 million deaf people in Turkey alone <sup>[2]</sup> that's more than entire population of some countries. 
+They can't find friends, can't find love, can't even talk to a random person. <b>If we don't act these people may be doomed to loneliness!</b> It is not just a bunch of people there are actually 2.5 million deaf people in Turkey alone <sup>[2]</sup> that's more than entire population of some countries. 
 </p>
 
 
@@ -25,17 +25,17 @@ Well, as cool programmists we need to create a simple and friendly app that peop
 </p>
 
 <p>
-We will start simple and then will make app more and more advanced. Our main vision is this: simple tutor app --> tutor app + sign chat (you send message in text it comes in signs) + no ads or monetisation (completely free/at least for first year :) )
+We will start simple and then will make app more and more advanced. Our main vision is this: simple tutor app --> tutor app + sign chat (you send message in text it comes in signs) + no ads or monetisation
 </p>
 
 <h3>How to start</h3>
 
 <p>
-Clone this repository to your computer and then go to www folder and press index.html and contemplate the app. For additional information on how app works and how it is converted from web app to the mobile go to info/Project Structue
+Clone this repository to your computer and then go to www folder and press index.html and contemplate the app. For additional information on how app works and how it is converted from web app to the mobile read our wiki
 </p>
 
 <p>
-Never hesitate to contact our leader - Anar Kazimov(anarkazimov98@gmail.com)
+You can always contact us at eskplaystore@gmail.com
 </p>
 
 <h3>Final words!</h3>
