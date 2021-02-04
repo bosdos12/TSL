@@ -11,7 +11,7 @@ $(document).ready(function(){
       window.clearInterval(refreshSecondIntervalId);
     } catch(err){}
     
-    //this is an interval that checks for chosem circles and update gestures if necessary
+    //this is an interval that checks for chosen circles and update gestures if necessary
       
     //this is interval for two gesture signs
     if (colour != "rgb(0, 0, 255)" && colour != "rgb(0, 128, 0)"){
